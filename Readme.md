@@ -1,7 +1,7 @@
 # Личный проект «Что посмотреть» [![Build status][travis-image]][travis-url]
 
 * Студент: [Artur](https://up.htmlacademy.ru/react/3/user/849291).
-* Наставник: `Неизвестно`.
+* Наставник: [Николай Загорный](https://htmlacademy.ru/profile/id452233)
 
 ---
 
