@@ -4,8 +4,13 @@ import Card from "../card/card.jsx";
 
 const Main = (props) => {
 
-  const {title, genre, issuedDate, moviesList} = props;
-  const cardsList = moviesList.map((it, i) => <Card key={it + i} name={it} />);
+  const {title, genre, issuedDate, moviesList, onMovieCardTitleClick} = props;
+  const cardsList = moviesList.map((it, i) =>
+    <Card
+      key={it + i}
+      name={it}
+      onMovieCardTitleHandler = {onMovieCardTitleClick}
+    />);
 
   return (
     <React.Fragment>
@@ -152,5 +157,6 @@ Main.propTypes = {
   title: PropTypes.PropTypes.string.isRequired,
   genre: PropTypes.PropTypes.string.isRequired,
   issuedDate: PropTypes.number.isRequired,
-  moviesList: PropTypes.array.isRequired
+  moviesList: PropTypes.array.isRequired,
+  onMovieCardTitleClick: PropTypes.func.isRequired
 };

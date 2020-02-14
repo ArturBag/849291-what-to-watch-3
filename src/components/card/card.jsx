@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const Card = (props) => {
 
-  const {name} = props;
+  const {name, onMovieCardTitleClick} = props;
 
   return (
     <article className="small-movie-card catalog__movies-card">
@@ -16,7 +16,10 @@ const Card = (props) => {
         />
       </div>
       <h3 className="small-movie-card__title">
-        <a className="small-movie-card__link" href="movie-page.html">
+        <a
+          onClick={onMovieCardTitleClick}
+          className="small-movie-card__link" href="movie-page.html"
+        >
           {name}
         </a>
       </h3>
@@ -28,5 +31,6 @@ const Card = (props) => {
 export default Card;
 
 Card.propTypes = {
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
+  onMovieCardTitleClick: PropTypes.func.isRequired
 };

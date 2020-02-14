@@ -4,9 +4,17 @@ import Main from "../main/main.jsx";
 
 const App = (props) => {
 
+  const movieCardTitleHandler = () => {};
+
   const {title, genre, issuedDate, moviesList} = props;
   return (
-    <Main title={title} genre={genre} issuedDate={issuedDate} moviesList={moviesList} />
+    <Main
+      title={title}
+      genre={genre}
+      issuedDate={issuedDate}
+      moviesList={moviesList}
+      onMovieCardTitleClick={movieCardTitleHandler}
+    />
   );
 };
 
