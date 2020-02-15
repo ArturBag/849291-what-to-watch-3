@@ -19,18 +19,17 @@ const moviesList = [
 
 it(`Render Main`, () => {
 
-  const movieCardTitleHandler = () => {};
-
   const tree = renderer
     .create(<Main
       title={MovieHeader.TITLE}
       genre={MovieHeader.GENRE}
       issuedDate={MovieHeader.ISSUED_DATE}
       moviesList={moviesList}
-      onMovieCardTitleClick={movieCardTitleHandler}
+      onMovieCardTitleHandler={() => {}}
     />)
     .toJSON();
 
   expect(tree).toMatchSnapshot();
 
 });
+

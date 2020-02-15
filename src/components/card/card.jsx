@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const Card = (props) => {
 
-  const {name, onMovieCardTitleClick} = props;
+  const {name, onMovieCardTitleHandler} = props;
 
   return (
     <article className="small-movie-card catalog__movies-card">
@@ -17,7 +17,7 @@ const Card = (props) => {
       </div>
       <h3 className="small-movie-card__title">
         <a
-          onClick={onMovieCardTitleClick}
+          onClick={onMovieCardTitleHandler}
           className="small-movie-card__link" href="movie-page.html"
         >
           {name}
@@ -28,9 +28,10 @@ const Card = (props) => {
   );
 };
 
+
 export default Card;
 
 Card.propTypes = {
   name: PropTypes.string.isRequired,
-  onMovieCardTitleClick: PropTypes.func.isRequired
+  onMovieCardTitleHandler: PropTypes.func.isRequired
 };
