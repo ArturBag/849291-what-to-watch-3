@@ -16,7 +16,7 @@ it(`Should card title be pressed`, () => {
   const mainComponent = shallow(
       <Card
         name={`Friends`}
-        onMovieCardTitleHandler={onMovieCardTitleClick}
+        onMovieCardTitleClick={onMovieCardTitleClick}
       />
   );
 

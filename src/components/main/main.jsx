@@ -9,7 +9,7 @@ const Main = (props) => {
     <Card
       key={it + i}
       name={it}
-      onMovieCardTitleHandler = {onMovieCardTitleClick}
+      onMovieCardTitleClick = {onMovieCardTitleClick}
     />);
 
   return (

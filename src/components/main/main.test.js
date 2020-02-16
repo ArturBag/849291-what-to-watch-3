@@ -25,7 +25,7 @@ it(`Render Main`, () => {
       genre={MovieHeader.GENRE}
       issuedDate={MovieHeader.ISSUED_DATE}
       moviesList={moviesList}
-      onMovieCardTitleHandler={() => {}}
+      onMovieCardTitleClick={() => {}}
     />)
     .toJSON();
 

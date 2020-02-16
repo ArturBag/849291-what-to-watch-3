@@ -20,6 +20,7 @@ exports[`Render Card 1`] = `
     <a
       className="small-movie-card__link"
       href="movie-page.html"
+      onClick={[Function]}
     >
       Home Alone
     </a>
