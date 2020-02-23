@@ -5,8 +5,10 @@ import Main from "../main/main.jsx";
 const App = (props) => {
 
   const movieCardTitleHandler = () => {};
+  const movieCardMouseOverHandler = () => {};
 
   const {title, genre, issuedDate, moviesList} = props;
+
   return (
     <Main
       title={title}
@@ -14,11 +16,10 @@ const App = (props) => {
       issuedDate={issuedDate}
       moviesList={moviesList}
       onMovieCardTitleClick={movieCardTitleHandler}
+      onMoiveCardMouseOver = {movieCardMouseOverHandler}
     />
   );
 };
-
-export default App;
 
 App.propTypes = {
   title: PropTypes.PropTypes.string.isRequired,
@@ -26,3 +27,5 @@ App.propTypes = {
   issuedDate: PropTypes.number.isRequired,
   moviesList: PropTypes.array.isRequired
 };
+
+export default App;

@@ -3,14 +3,18 @@ import PropTypes from "prop-types";
 
 const Card = (props) => {
 
-  const {name, onMovieCardTitleClick} = props;
+  const {title, preview, onMovieCardTitleClick, onMoiveCardMouseOver} = props;
 
   return (
-    <article className="small-movie-card catalog__movies-card">
+    <article className="small-movie-card catalog__movies-card"
+      onMouseOver={() => {
+        onMoiveCardMouseOver(title, preview);
+      }}
+    >
       <div className="small-movie-card__image">
         <img
-          src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
-          alt="Fantastic Beasts: The Crimes of Grindelwald"
+          src={preview}
+          alt={title}
           width={280}
           height={175}
         />
@@ -20,7 +24,7 @@ const Card = (props) => {
           onClick={onMovieCardTitleClick}
           className="small-movie-card__link" href="movie-page.html"
         >
-          {name}
+          {title}
         </a>
       </h3>
     </article>
@@ -29,9 +33,11 @@ const Card = (props) => {
 };
 
 
-export default Card;
-
 Card.propTypes = {
-  name: PropTypes.string.isRequired,
-  onMovieCardTitleClick: PropTypes.func.isRequired
+  title: PropTypes.string.isRequired,
+  preview: PropTypes.string.isRequired,
+  onMovieCardTitleClick: PropTypes.func.isRequired,
+  onMoiveCardMouseOver: PropTypes.func.isRequired,
 };
+
+export default Card;

@@ -1,27 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/app/app.jsx";
+import filmsList from "./mocks/films.js";
 
 const MovieHeader = {
-  TITLE: `The Grand Budapest Hotel`,
-  GENRE: `Drama`,
-  ISSUED_DATE: 2014
+  TITLE: filmsList[0].title,
+  GENRE: filmsList[0].genre,
+  ISSUED_DATE: filmsList[0].issuedDate
 };
-
-const moviesList = [
-  `Fantastic Beasts: The Crimes of Grindelwald`, `Bohemian Rhapsody`, `Macbeth`, `Aviator`,
-  `We need to talk about Kevin`, `What We Do in the Shadows`, `Revenant`, `Johnny English`,
-  `Shutter Island`, `Pulp Fiction`, `No Country for Old Men`, `Snatch`,
-  `Moonrise Kingdom`, `Seven Years in Tibet`, `Midnight Special`, `War of the Worlds`,
-  `Dardjeeling Limited`, `Orlando`, `Mindhunter`, `Midnight Special`
-];
 
 ReactDOM.render(
     <App
       title={MovieHeader.TITLE}
       genre={MovieHeader.GENRE}
       issuedDate={MovieHeader.ISSUED_DATE}
-      moviesList={moviesList}
+      moviesList={filmsList}
 
     />,
     document.querySelector(`#root`)

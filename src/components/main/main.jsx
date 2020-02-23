@@ -1,16 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Card from "../card/card.jsx";
+import MoviesList from "../movies-list/movies-list.jsx";
 
 const Main = (props) => {
 
-  const {title, genre, issuedDate, moviesList, onMovieCardTitleClick} = props;
-  const cardsList = moviesList.map((it, i) =>
-    <Card
-      key={it + i}
-      name={it}
-      onMovieCardTitleClick = {onMovieCardTitleClick}
-    />);
+  const {title, genre, issuedDate, moviesList, onMovieCardTitleClick, onMoiveCardMouseOver} = props;
 
   return (
     <React.Fragment>
@@ -126,7 +120,11 @@ const Main = (props) => {
             </li>
           </ul>
           <div className="catalog__movies-list">
-            {cardsList}
+            {<MoviesList
+              moviesList={moviesList}
+              onMovieCardTitleClick={onMovieCardTitleClick}
+              onMoiveCardMouseOver={onMoiveCardMouseOver}
+            />}
           </div>
           <div className="catalog__more">
             <button className="catalog__button" type="button">
@@ -158,5 +156,6 @@ Main.propTypes = {
   genre: PropTypes.PropTypes.string.isRequired,
   issuedDate: PropTypes.number.isRequired,
   moviesList: PropTypes.array.isRequired,
-  onMovieCardTitleClick: PropTypes.func.isRequired
+  onMovieCardTitleClick: PropTypes.func.isRequired,
+  onMoiveCardMouseOver: PropTypes.func.isRequired,
 };
