@@ -2,20 +2,62 @@ import React from "react";
 import renderer from "react-test-renderer";
 import Main from "./main.jsx";
 
+const filmsList = [
+  {
+    title: `Breaking Bad`,
+    genre: `Thriller`,
+    issuedDate: 2000,
+    preview: `../../markup/img/fantastic-beasts-the-crimes-of-grindelwald.jpg`
+  },
+  {
+    title: `Pirates`,
+    genre: `Drama`,
+    issuedDate: 1999,
+    preview: `../../markup/img/bohemian-rhapsody.jpg`
+  },
+  {
+    title: `Misfits`,
+    genre: `Drama`,
+    issuedDate: 1998,
+    preview: `../../markup/img/macbeth.jpg`
+  },
+  {
+    title: `Terminal`,
+    genre: `Horror`,
+    issuedDate: 1992,
+    preview: `../../markup/img/aviator.jpg`
+  },
+  {
+    title: `Star Wars`,
+    genre: `Documentary`,
+    issuedDate: 2002,
+    preview: `../../markup/img/we-need-to-talk-about-kevin.jpg`
+  },
+  {
+    title: `Forsage`,
+    genre: `Crime`,
+    issuedDate: 2001,
+    preview: `../../markup/img/what-we-do-in-the-shadows.jpg`
+  },
+  {
+    title: `Goal`,
+    genre: `Comedy`,
+    issuedDate: 2011,
+    preview: `../../markup/img/orlando.jpg`
+  },
+  {
+    title: `New Yorker`,
+    genre: `History`,
+    issuedDate: 2010,
+    preview: `../../markup/img/war-of-the-worlds.jpg`
+  }
+];
 
 const MovieHeader = {
-  TITLE: `Breaking Bad`,
-  GENRE: `Triller`,
-  ISSUED_DATE: 2008
+  TITLE: filmsList[0].title,
+  GENRE: filmsList[0].genre,
+  ISSUED_DATE: filmsList[0].issuedDate
 };
-
-const moviesList = [
-  `	Ghost`, `Bohemian Rhapsody`, `Home Alone`, `Home Alone 2`,
-  `Pretty Woman`, `Dances with Wolves`, `Total Recall`, `	Back to the Future Part III`,
-  `Die Hard 2`, `Presumed Innocent`, `Teenage Mutant Ninja Turtles`, `Kindergarten Cop`,
-  `Downtown`, `Internal Affairs`, `Chainsaw`, `Ski Patrol`,
-  `Loose Cannons`, `Madhouse`, `House Party`, `Crazy People`
-];
 
 it(`Render Main`, () => {
 
@@ -24,8 +66,9 @@ it(`Render Main`, () => {
       title={MovieHeader.TITLE}
       genre={MovieHeader.GENRE}
       issuedDate={MovieHeader.ISSUED_DATE}
-      moviesList={moviesList}
+      moviesList={filmsList}
       onMovieCardTitleClick={() => {}}
+      onMoiveCardMouseOver = {() => {}}
     />)
     .toJSON();
 

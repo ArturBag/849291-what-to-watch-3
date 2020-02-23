@@ -7,8 +7,10 @@ it(`Render Card`, () => {
 
   const tree = renderer
     .create(<Card
-      name={`Home Alone`}
+      title={`Home Alone`}
+      preview={`img/test.jpg`}
       onMovieCardTitleClick={() => {}}
+      onMoiveCardMouseOver={() => {}}
     />)
     .toJSON();
 

@@ -1,6 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import App from "./app.jsx";
+import MoviesList from "./movies-list.jsx";
 
 const filmsList = [
   {
@@ -53,23 +53,17 @@ const filmsList = [
   }
 ];
 
-const MovieHeader = {
-  TITLE: filmsList[0].title,
-  GENRE: filmsList[0].genre,
-  ISSUED_DATE: filmsList[0].issuedDate
-};
-
-it(`Render App`, () => {
+it(`Should render movies list`, () => {
 
   const tree = renderer
-    .create(<App
-      title={MovieHeader.TITLE}
-      genre={MovieHeader.GENRE}
-      issuedDate={MovieHeader.ISSUED_DATE}
+    .create(<MoviesList
       moviesList={filmsList}
-    />)
-    .toJSON();
+      onMovieCardTitleClick={() => { }}
+      onMoiveCardMouseOver={() => { }}
+
+    />);
 
   expect(tree).toMatchSnapshot();
+
 
 });
