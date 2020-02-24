@@ -21,7 +21,9 @@ const Card = (props) => {
       </div>
       <h3 className="small-movie-card__title">
         <a
-          onClick={onMovieCardTitleClick}
+          onClick={(evt) => {
+            onMovieCardTitleClick(evt, title);
+          }}
           className="small-movie-card__link" href="movie-page.html"
         >
           {title}
