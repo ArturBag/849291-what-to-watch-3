@@ -15,7 +15,8 @@ const movieDetailsData = {
   director: `Angel Calderon`,
   starring: [`Linda Horne, Angel Calderon`],
   poster: `img/the-grand-budapest-hotel-poster.jpg`,
-  background: `img/bg-the-grand-budapest-hotel.jpg`
+  background: `img/bg-the-grand-budapest-hotel.jpg`,
+  videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
 };
 
 it(`Should render movie details component`, () => {

@@ -12,7 +12,8 @@ const filmsList = [
     director: `Bernard Harding`,
     starring: [`Bill Murray, Edward Norton, Jude Law, Willem Dafoe and other`],
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
-    background: `img/bg-the-grand-budapest-hotel.jpg`
+    background: `img/bg-the-grand-budapest-hotel.jpg`,
+    videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
   },
   {
     title: `Bohemian Rhapsody`,
@@ -28,7 +29,8 @@ const filmsList = [
     director: `Macie Mcmillan`,
     starring: [`Bill Murray, Edward Norton, Jude Law, Willem Dafoe and other`],
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
-    background: `img/bg-the-grand-budapest-hotel.jpg`
+    background: `img/bg-the-grand-budapest-hotel.jpg`,
+    videoSrc: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`
   },
   {
     title: `Macbeth`,
@@ -43,7 +45,8 @@ const filmsList = [
     director: `Lara Sweeney`,
     starring: [`Bill Murray, Edward Norton, Jude Law, Willem Dafoe and other`],
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
-    background: `img/bg-the-grand-budapest-hotel.jpg`
+    background: `img/bg-the-grand-budapest-hotel.jpg`,
+    videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
   },
   {
     title: `Aviator`,
@@ -59,7 +62,8 @@ const filmsList = [
     director: `Heath Brandt`,
     starring: [`Edward Norton, Marley Arellano, Jude Law, Willem Dafoe and other`],
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
-    background: `img/bg-the-grand-budapest-hotel.jpg`
+    background: `img/bg-the-grand-budapest-hotel.jpg`,
+    videoSrc: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`
   },
   {
     title: `We need to talk about Kevin`,
@@ -74,7 +78,8 @@ const filmsList = [
     director: `Kyra Hurst`,
     starring: [`Edward Norton, Marley Arellano, Jude Law, Willem Dafoe and other`],
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
-    background: `img/bg-the-grand-budapest-hotel.jpg`
+    background: `img/bg-the-grand-budapest-hotel.jpg`,
+    videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
   },
   {
     title: `What We Do in the Shadows`,
@@ -89,7 +94,8 @@ const filmsList = [
     director: `Mylee Terry`,
     starring: [`Richard Howe, Cedric Douglas, Jude Law, Willem Dafoe and other`],
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
-    background: `img/bg-the-grand-budapest-hotel.jpg`
+    background: `img/bg-the-grand-budapest-hotel.jpg`,
+    videoSrc: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`
   },
   {
     title: `Orlando`,
@@ -104,7 +110,8 @@ const filmsList = [
     director: `Karly Mays`,
     starring: [`Will Pierce, Richard Howe, Cedric Douglas, Dario Archer`],
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
-    background: `img/bg-the-grand-budapest-hotel.jpg`
+    background: `img/bg-the-grand-budapest-hotel.jpg`,
+    videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
   },
   {
     title: `War of the Worlds`,
@@ -119,7 +126,8 @@ const filmsList = [
     director: `Janessa Sims`,
     starring: [`Charlie Brewer, Edward Norton, Marley Arellano, Zion Fitzpatrick`],
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
-    background: `img/bg-the-grand-budapest-hotel.jpg`
+    background: `img/bg-the-grand-budapest-hotel.jpg`,
+    videoSrc: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`
   }
 ];
 

@@ -11,10 +11,10 @@ class App extends PureComponent {
 
     this.state = {
       activeComponent: `Main`,
-      activeMovieDetailsIndex: 0
+      activeMovieDetailsIndex: 0,
     };
-  }
 
+  }
 
   _renderApp() {
 
@@ -30,11 +30,10 @@ class App extends PureComponent {
       });
     };
 
-    const movieCardMouseOverHandler = () => { };
-
     const {title, genre, issuedDate, moviesList} = this.props;
     const {activeComponent} = this.state;
     const movieDetailsData = moviesList[this.state.activeMovieDetailsIndex];
+
 
     if (activeComponent === `Main`) {
       return (
@@ -44,7 +43,6 @@ class App extends PureComponent {
           issuedDate={issuedDate}
           moviesList={moviesList}
           onMovieCardTitleClick={movieCardTitleHandler}
-          onMoiveCardMouseOver={movieCardMouseOverHandler}
         />
       );
     } else if (activeComponent === `MovieDetails`) {

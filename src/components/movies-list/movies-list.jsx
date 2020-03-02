@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Card from "../card/card.jsx";
 
 const MoviesList = (props) => {
-  const {moviesList, onMovieCardTitleClick, onMoiveCardMouseOver} = props;
+  const {moviesList, onMovieCardTitleClick} = props;
 
   return (
     moviesList.map((it, i) =>
@@ -11,8 +11,9 @@ const MoviesList = (props) => {
         key={it + i}
         title={it.title}
         preview={it.preview}
+        videoSrc={it.videoSrc}
+        id={i}
         onMovieCardTitleClick={onMovieCardTitleClick}
-        onMoiveCardMouseOver={onMoiveCardMouseOver}
       />)
   );
 
@@ -21,7 +22,6 @@ const MoviesList = (props) => {
 MoviesList.propTypes = {
   moviesList: PropTypes.array.isRequired,
   onMovieCardTitleClick: PropTypes.func.isRequired,
-  onMoiveCardMouseOver: PropTypes.func.isRequired,
 };
 
 export default MoviesList;
