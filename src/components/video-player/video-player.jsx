@@ -36,7 +36,12 @@ export default class VideoPlayer extends PureComponent {
   }
 
   componentWillUnmount() {
-    this._videoRef.current = null;
+    const video = this._videoRef.current;
+
+    video.oncanplaythrough = null;
+    video.onplay = null;
+    video.src = ``;
+    video.muted = ``;
 
   }
 

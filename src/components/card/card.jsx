@@ -14,14 +14,6 @@ class Card extends PureComponent {
 
   }
 
-  _onMoiveCardMouseOver() {
-    this.setState({isCardMouseOvered: true});
-  }
-
-  _onMoiveCardMouseOut() {
-    this.setState({isCardMouseOvered: false});
-  }
-
 
   render() {
 
@@ -32,10 +24,13 @@ class Card extends PureComponent {
     return (
       <article className="small-movie-card catalog__movies-card"
         onMouseOver={() => {
-          this._onMoiveCardMouseOver();
+          this.setState({
+            activePlayerId: activePlayerId === id ? -1 : id,
+            isCardMouseOvered: true
+          });
         }}
         onMouseOut={() => {
-          this._onMoiveCardMouseOut();
+          this.setState({isCardMouseOvered: false});
         }}
       >
         <div className="small-movie-card__image">
@@ -44,9 +39,6 @@ class Card extends PureComponent {
               previewMode={id === activePlayerId}
               isPlaying={id === activePlayerId}
               videoSrc={videoSrc}
-              onPlayMouseOver={() => this.setState({
-                activePlayerId: activePlayerId === id ? -1 : id
-              })}
             />
             :
             <img

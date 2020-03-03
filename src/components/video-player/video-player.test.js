@@ -28,7 +28,6 @@ it(`Render VideoPlayer`, () => {
       previewMode={true}
       isPlaying={true}
       videoSrc={videoSrc}
-      onPlayMouseOver={() => { }}
     />, {
       createNodeMock: () => {
         return {};
