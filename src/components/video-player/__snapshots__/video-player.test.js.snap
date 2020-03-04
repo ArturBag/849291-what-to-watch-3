@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render VideoPlayer 1`] = `
+<div
+  className="player"
+>
+  <video
+    className="player__video"
+    poster="img/player-poster.jpg"
+    src="#"
+  />
+</div>
+`;

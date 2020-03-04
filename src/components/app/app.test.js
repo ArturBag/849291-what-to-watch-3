@@ -16,7 +16,8 @@ const filmsList = [
     director: `Bernard Harding`,
     starring: [`Bill Murray, Edward Norton, Jude Law, Willem Dafoe and other`],
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
-    background: `img/bg-the-grand-budapest-hotel.jpg`
+    background: `img/bg-the-grand-budapest-hotel.jpg`,
+    videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
   },
   {
     title: `Pirates`,
@@ -31,7 +32,8 @@ const filmsList = [
     director: `Will Brooks`,
     starring: [`Kymani Burgess, Jaylin Cherry, Jacey Oliver, Conrad Wolf and other`],
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
-    background: `img/bg-the-grand-budapest-hotel.jpg`
+    background: `img/bg-the-grand-budapest-hotel.jpg`,
+    videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
   },
   {
     title: `Misfits`,
@@ -46,7 +48,8 @@ const filmsList = [
     director: `Titus Sparks`,
     starring: [`Giovanny Mccullough, Leah Delacruz, Davon Terrell, Romeo Carr and other`],
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
-    background: `img/bg-the-grand-budapest-hotel.jpg`
+    background: `img/bg-the-grand-budapest-hotel.jpg`,
+    videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
   },
   {
     title: `Terminal`,
@@ -61,7 +64,8 @@ const filmsList = [
     director: `Jeramiah Goldeng`,
     starring: [`Nasir Castaneda, Ariel Brooks, Lucia Compton and other`],
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
-    background: `img/bg-the-grand-budapest-hotel.jpg`
+    background: `img/bg-the-grand-budapest-hotel.jpg`,
+    videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
   },
   {
     title: `Star Wars`,
@@ -76,7 +80,8 @@ const filmsList = [
     director: `Roy Boyle`,
     starring: [`Molly Reyes, Edward Norton, Mareli Moore, Makenna Henderson and other`],
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
-    background: `img/bg-the-grand-budapest-hotel.jpg`
+    background: `img/bg-the-grand-budapest-hotel.jpg`,
+    videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
   },
   {
     title: `Forsage`,
@@ -91,7 +96,8 @@ const filmsList = [
     director: `Claire Hodge`,
     starring: [`Amaris Hess, Tobias Osborne, Samir Fitzpatrick, Baron Bolton and other`],
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
-    background: `img/bg-the-grand-budapest-hotel.jpg`
+    background: `img/bg-the-grand-budapest-hotel.jpg`,
+    videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
   },
   {
     title: `Goal`,
@@ -106,7 +112,8 @@ const filmsList = [
     director: `Brynlee Haney`,
     starring: [`Piper Mccann, Seamus Ashley, Jude Law, Lila Waters and other`],
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
-    background: `img/bg-the-grand-budapest-hotel.jpg`
+    background: `img/bg-the-grand-budapest-hotel.jpg`,
+    videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
   },
   {
     title: `New Yorker`,
@@ -121,7 +128,8 @@ const filmsList = [
     director: `Melany Short`,
     starring: [`Franklin Sosa, Abby Beasley, Jovan Lang and other`],
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
-    background: `img/bg-the-grand-budapest-hotel.jpg`
+    background: `img/bg-the-grand-budapest-hotel.jpg`,
+    videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
   }
 ];
 

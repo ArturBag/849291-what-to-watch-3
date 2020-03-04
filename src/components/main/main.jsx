@@ -4,7 +4,7 @@ import MoviesList from "../movies-list/movies-list.jsx";
 
 const Main = (props) => {
 
-  const {title, genre, issuedDate, moviesList, onMovieCardTitleClick, onMoiveCardMouseOver} = props;
+  const {title, genre, issuedDate, moviesList, onMovieCardTitleClick} = props;
 
   return (
     <React.Fragment>
@@ -123,7 +123,6 @@ const Main = (props) => {
             {<MoviesList
               moviesList={moviesList}
               onMovieCardTitleClick={onMovieCardTitleClick}
-              onMoiveCardMouseOver={onMoiveCardMouseOver}
             />}
           </div>
           <div className="catalog__more">
@@ -157,5 +156,4 @@ Main.propTypes = {
   issuedDate: PropTypes.number.isRequired,
   moviesList: PropTypes.array.isRequired,
   onMovieCardTitleClick: PropTypes.func.isRequired,
-  onMoiveCardMouseOver: PropTypes.func.isRequired,
 };
