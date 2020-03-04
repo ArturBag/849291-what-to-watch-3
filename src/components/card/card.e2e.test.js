@@ -31,7 +31,7 @@ describe(`Card events`, () => {
 
   });
 
-  it(`Should on card mouse be overed`, () => {
+  it(`On mouse enter`, () => {
 
 
     const mainComponent = shallow(
@@ -44,12 +44,12 @@ describe(`Card events`, () => {
         />
     );
 
-    mainComponent.simulate(`mouseover`);
+    mainComponent.simulate(`mouseenter`);
     expect(mainComponent.state(`isCardMouseOvered`)).toBe(true);
     expect(mainComponent.state(`activePlayerId`) >= 0).toBe(true);
   });
 
-  it(`Should on card mouse be out`, () => {
+  it(`On mouse leave`, () => {
 
 
     const mainComponent = shallow(
@@ -62,7 +62,7 @@ describe(`Card events`, () => {
         />
     );
 
-    mainComponent.simulate(`mouseout`);
+    mainComponent.simulate(`mouseleave`);
     expect(mainComponent.state(`isCardMouseOvered`)).toBe(false);
 
     expect(mainComponent.state(`activePlayerId`) === -1).toBe(true);

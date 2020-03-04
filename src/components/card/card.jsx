@@ -23,14 +23,16 @@ class Card extends PureComponent {
 
     return (
       <article className="small-movie-card catalog__movies-card"
-        onMouseOver={() => {
+        onMouseEnter={() => {
           this.setState({
             activePlayerId: activePlayerId === id ? -1 : id,
             isCardMouseOvered: true
           });
         }}
-        onMouseOut={() => {
-          this.setState({isCardMouseOvered: false});
+        onMouseLeave={() => {
+          this.setState({
+            isCardMouseOvered: false,
+            activePlayerId: -1});
         }}
       >
         <div className="small-movie-card__image">
