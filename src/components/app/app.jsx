@@ -49,6 +49,7 @@ class App extends PureComponent {
       return (
         <MovieDetails
           movieDetailsData={movieDetailsData}
+          onMovieCardTitleClick={movieCardTitleHandler}
         />
       );
     }

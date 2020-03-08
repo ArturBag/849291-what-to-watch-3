@@ -10,14 +10,55 @@ const filmsList = [
     ultrices ut elit.`,
     rating: 8.9,
     director: `Bernard Harding`,
-    starring: [`Bill Murray, Edward Norton, Jude Law, Willem Dafoe and other`],
+    starring: [`Bill Murray`, `Edward Norton`, `Jude Law`, `Willem Dafoe`, `Saoirse Ronan`, `Tony Revoloru`, `Tom Wilkinson`],
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
-    videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
+    videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
+    runTime: {hours: 1, minutes: 39},
+    reviews: [
+      {
+        name: `Kate Muir`,
+        reviewText: `Discerning travellers and Wes Anderson fans will luxuriate in the glorious
+        Mittel-European kitsch of one of the director's funniest and most exquisitely designed movies in years.`,
+        date: `December 24, 2016`,
+        score: 8.9
+      },
+      {
+        name: `Bill Goodykoontz`,
+        reviewText: `Anderson's films are too precious for some, but for those of us willing to lose ourselves in them, they're a delight.
+        "The Grand Budapest Hotel" is no different, except that he has added a hint of gravitas to the mix, improving the recipe.`,
+        date: `November 18, 2015`,
+        score: 8.0
+      },
+      {
+        name: `Amanda Greever`,
+        reviewText: `I didn't find it amusing, and while I can appreciate the creativity, it's an hour and 40 minutes I wish I could take back.`,
+        date: `November 18, 2015`,
+        score: 8.0
+      },
+      {
+        name: `Matthew Lickona`,
+        reviewText: `The mannered, madcap proceedings are often delightful, occasionally silly, and here and there, gruesome and/or heartbreaking.`,
+        date: `December 20, 2016`,
+        score: 7.2
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 7.6
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 7.0
+      },
+    ]
   },
   {
     title: `Bohemian Rhapsody`,
-    genre: `Romance`,
+    genre: `Crime`,
     issuedDate: 2014,
     ratingCount: 100,
     preview: `img/bohemian-rhapsody.jpg`,
@@ -27,14 +68,55 @@ const filmsList = [
     Proin mollis justo imperdiet arcu lobortis, ac dictum risus condimentum`,
     rating: 3.1,
     director: `Macie Mcmillan`,
-    starring: [`Bill Murray, Edward Norton, Jude Law, Willem Dafoe and other`],
+    starring: [`Bill Murray`, `Edward Norton`, `Jude Law`, `Willem Dafoe`, `Jeff Goldblum`, `Ralph Fiennes`],
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
-    videoSrc: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`
+    videoSrc: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
+    runTime: {hours: 2, minutes: 22},
+    reviews: [
+      {
+        name: `Kate Muir`,
+        reviewText: `Discerning travellers and Wes Anderson fans will luxuriate in the glorious
+        Mittel-European kitsch of one of the director's funniest and most exquisitely designed movies in years.`,
+        date: `December 24, 2016`,
+        score: 8.9
+      },
+      {
+        name: `Bill Goodykoontz`,
+        reviewText: `Anderson's films are too precious for some, but for those of us willing to lose ourselves in them, they're a delight.
+        "The Grand Budapest Hotel" is no different, except that he has added a hint of gravitas to the mix, improving the recipe.`,
+        date: `November 18, 2015`,
+        score: 8.0
+      },
+      {
+        name: `Amanda Greever`,
+        reviewText: `I didn't find it amusing, and while I can appreciate the creativity, it's an hour and 40 minutes I wish I could take back.`,
+        date: `November 18, 2015`,
+        score: 8.0
+      },
+      {
+        name: `Matthew Lickona`,
+        reviewText: `The mannered, madcap proceedings are often delightful, occasionally silly, and here and there, gruesome and/or heartbreaking.`,
+        date: `December 20, 2016`,
+        score: 7.2
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 7.6
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 7.0
+      },
+    ]
   },
   {
     title: `Macbeth`,
-    genre: `Documentary`,
+    genre: `Drama`,
     issuedDate: 2008,
     ratingCount: 50,
     preview: `img/macbeth.jpg`,
@@ -43,10 +125,51 @@ const filmsList = [
     ultrices ut elit.`,
     rating: 1.5,
     director: `Lara Sweeney`,
-    starring: [`Bill Murray, Edward Norton, Jude Law, Willem Dafoe and other`],
+    starring: [`Bill Murray`, `Edward Norton`, `Jude Law`, `Willem Dafoe`, `Edward Norton`, `Jude Law`, `Willem Dafoe`, `Jeff Goldblum`],
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
-    videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
+    videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
+    runTime: {hours: 1, minutes: 11},
+    reviews: [
+      {
+        name: `Kate Muir`,
+        reviewText: `Discerning travellers and Wes Anderson fans will luxuriate in the glorious
+        Mittel-European kitsch of one of the director's funniest and most exquisitely designed movies in years.`,
+        date: `December 24, 2016`,
+        score: 8.9
+      },
+      {
+        name: `Bill Goodykoontz`,
+        reviewText: `Anderson's films are too precious for some, but for those of us willing to lose ourselves in them, they're a delight.
+        "The Grand Budapest Hotel" is no different, except that he has added a hint of gravitas to the mix, improving the recipe.`,
+        date: `November 18, 2015`,
+        score: 8.0
+      },
+      {
+        name: `Amanda Greever`,
+        reviewText: `I didn't find it amusing, and while I can appreciate the creativity, it's an hour and 40 minutes I wish I could take back.`,
+        date: `November 18, 2015`,
+        score: 8.0
+      },
+      {
+        name: `Matthew Lickona`,
+        reviewText: `The mannered, madcap proceedings are often delightful, occasionally silly, and here and there, gruesome and/or heartbreaking.`,
+        date: `December 20, 2016`,
+        score: 7.2
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 7.6
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 7.0
+      },
+    ]
   },
   {
     title: `Aviator`,
@@ -60,10 +183,51 @@ const filmsList = [
     egestas bibendum magna.Donec id purus a sem auctor accumsan eu nec leo.`,
     rating: 1.9,
     director: `Heath Brandt`,
-    starring: [`Edward Norton, Marley Arellano, Jude Law, Willem Dafoe and other`],
+    starring: [`Edward Norton`, `Marley Arellano`, `Edward Norton`, `Jude Law`, `Willem Dafoe`, `Jeff Goldblum`, `Jude Law`, `Willem Dafoe`],
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
-    videoSrc: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`
+    videoSrc: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
+    runTime: {hours: 2, minutes: 45},
+    reviews: [
+      {
+        name: `Kate Muir`,
+        reviewText: `Discerning travellers and Wes Anderson fans will luxuriate in the glorious
+        Mittel-European kitsch of one of the director's funniest and most exquisitely designed movies in years.`,
+        date: `December 24, 2016`,
+        score: 8.9
+      },
+      {
+        name: `Bill Goodykoontz`,
+        reviewText: `Anderson's films are too precious for some, but for those of us willing to lose ourselves in them, they're a delight.
+        "The Grand Budapest Hotel" is no different, except that he has added a hint of gravitas to the mix, improving the recipe.`,
+        date: `November 18, 2015`,
+        score: 8.0
+      },
+      {
+        name: `Amanda Greever`,
+        reviewText: `I didn't find it amusing, and while I can appreciate the creativity, it's an hour and 40 minutes I wish I could take back.`,
+        date: `November 18, 2015`,
+        score: 8.0
+      },
+      {
+        name: `Matthew Lickona`,
+        reviewText: `The mannered, madcap proceedings are often delightful, occasionally silly, and here and there, gruesome and/or heartbreaking.`,
+        date: `December 20, 2016`,
+        score: 7.2
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 7.6
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 7.0
+      },
+    ]
   },
   {
     title: `We need to talk about Kevin`,
@@ -76,14 +240,55 @@ const filmsList = [
     ultrices ut elit.`,
     rating: 6.5,
     director: `Kyra Hurst`,
-    starring: [`Edward Norton, Marley Arellano, Jude Law, Willem Dafoe and other`],
+    starring: [`Edward Norton`, `Marley Arellano`, `Jude Law`, `Willem Dafoe`, `Edward Norton`, `Jude Law`, `Willem Dafoe`, `Jeff Goldblum`],
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
-    videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
+    videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
+    runTime: {hours: 1, minutes: 39},
+    reviews: [
+      {
+        name: `Kate Muir`,
+        reviewText: `Discerning travellers and Wes Anderson fans will luxuriate in the glorious
+        Mittel-European kitsch of one of the director's funniest and most exquisitely designed movies in years.`,
+        date: `December 24, 2016`,
+        score: 8.9
+      },
+      {
+        name: `Bill Goodykoontz`,
+        reviewText: `Anderson's films are too precious for some, but for those of us willing to lose ourselves in them, they're a delight.
+        "The Grand Budapest Hotel" is no different, except that he has added a hint of gravitas to the mix, improving the recipe.`,
+        date: `November 18, 2015`,
+        score: 8.0
+      },
+      {
+        name: `Amanda Greever`,
+        reviewText: `I didn't find it amusing, and while I can appreciate the creativity, it's an hour and 40 minutes I wish I could take back.`,
+        date: `November 18, 2015`,
+        score: 8.0
+      },
+      {
+        name: `Matthew Lickona`,
+        reviewText: `The mannered, madcap proceedings are often delightful, occasionally silly, and here and there, gruesome and/or heartbreaking.`,
+        date: `December 20, 2016`,
+        score: 7.2
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 7.6
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 7.0
+      },
+    ]
   },
   {
     title: `What We Do in the Shadows`,
-    genre: `Thriller`,
+    genre: `Kids & Family`,
     issuedDate: 2003,
     ratingCount: 223,
     preview: `img/what-we-do-in-the-shadows.jpg`,
@@ -92,10 +297,51 @@ const filmsList = [
     ultrices ut elit.`,
     rating: 5.0,
     director: `Mylee Terry`,
-    starring: [`Richard Howe, Cedric Douglas, Jude Law, Willem Dafoe and other`],
+    starring: [`Richard Howe`, `Edward Norton`, `Jude Law`, `Willem Dafoe`, `Jeff Goldblum`, `Cedric Douglas`, `Jude Law`, `Willem Dafoe`],
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
-    videoSrc: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`
+    videoSrc: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
+    runTime: {hours: 1, minutes: 32},
+    reviews: [
+      {
+        name: `Kate Muir`,
+        reviewText: `Discerning travellers and Wes Anderson fans will luxuriate in the glorious
+        Mittel-European kitsch of one of the director's funniest and most exquisitely designed movies in years.`,
+        date: `December 24, 2016`,
+        score: 8.9
+      },
+      {
+        name: `Bill Goodykoontz`,
+        reviewText: `Anderson's films are too precious for some, but for those of us willing to lose ourselves in them, they're a delight.
+        "The Grand Budapest Hotel" is no different, except that he has added a hint of gravitas to the mix, improving the recipe.`,
+        date: `November 18, 2015`,
+        score: 8.0
+      },
+      {
+        name: `Amanda Greever`,
+        reviewText: `I didn't find it amusing, and while I can appreciate the creativity, it's an hour and 40 minutes I wish I could take back.`,
+        date: `November 18, 2015`,
+        score: 8.0
+      },
+      {
+        name: `Matthew Lickona`,
+        reviewText: `The mannered, madcap proceedings are often delightful, occasionally silly, and here and there, gruesome and/or heartbreaking.`,
+        date: `December 20, 2016`,
+        score: 7.2
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 7.6
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 7.0
+      },
+    ]
   },
   {
     title: `Orlando`,
@@ -108,14 +354,55 @@ const filmsList = [
     ultrices ut elit.`,
     rating: 8.4,
     director: `Karly Mays`,
-    starring: [`Will Pierce, Richard Howe, Cedric Douglas, Dario Archer`],
+    starring: [`Will Pierce`, `Richard Howe`, `Cedric Douglas`, `Dario Archer`, `Edward Norton`, `Jude Law`, `Willem Dafoe`, `Jeff Goldblum`],
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
-    videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
+    videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
+    runTime: {hours: 3, minutes: 11},
+    reviews: [
+      {
+        name: `Kate Muir`,
+        reviewText: `Discerning travellers and Wes Anderson fans will luxuriate in the glorious
+        Mittel-European kitsch of one of the director's funniest and most exquisitely designed movies in years.`,
+        date: `December 24, 2016`,
+        score: 8.9
+      },
+      {
+        name: `Bill Goodykoontz`,
+        reviewText: `Anderson's films are too precious for some, but for those of us willing to lose ourselves in them, they're a delight.
+        "The Grand Budapest Hotel" is no different, except that he has added a hint of gravitas to the mix, improving the recipe.`,
+        date: `November 18, 2015`,
+        score: 8.0
+      },
+      {
+        name: `Amanda Greever`,
+        reviewText: `I didn't find it amusing, and while I can appreciate the creativity, it's an hour and 40 minutes I wish I could take back.`,
+        date: `November 18, 2015`,
+        score: 8.0
+      },
+      {
+        name: `Matthew Lickona`,
+        reviewText: `The mannered, madcap proceedings are often delightful, occasionally silly, and here and there, gruesome and/or heartbreaking.`,
+        date: `December 20, 2016`,
+        score: 7.2
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 7.6
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 7.0
+      },
+    ]
   },
   {
     title: `War of the Worlds`,
-    genre: `Sci-Fi`,
+    genre: `Crime`,
     issuedDate: 2020,
     ratingCount: 320,
     preview: `img/war-of-the-worlds.jpg`,
@@ -124,10 +411,51 @@ const filmsList = [
     ultrices ut elit.`,
     rating: 6.8,
     director: `Janessa Sims`,
-    starring: [`Charlie Brewer, Edward Norton, Marley Arellano, Zion Fitzpatrick`],
+    starring: [`Charlie Brewer`, `Edward Norton`, `Marley Arellano`, `Zion Fitzpatrick`, `Edward Norton`, `Jude Law`, `Willem Dafoe`, `Jeff Goldblum`],
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
-    videoSrc: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`
+    videoSrc: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
+    runTime: {hours: 3, minutes: 39},
+    reviews: [
+      {
+        name: `Kate Muir`,
+        reviewText: `Discerning travellers and Wes Anderson fans will luxuriate in the glorious
+        Mittel-European kitsch of one of the director's funniest and most exquisitely designed movies in years.`,
+        date: `December 24, 2016`,
+        score: 8.9
+      },
+      {
+        name: `Bill Goodykoontz`,
+        reviewText: `Anderson's films are too precious for some, but for those of us willing to lose ourselves in them, they're a delight.
+        "The Grand Budapest Hotel" is no different, except that he has added a hint of gravitas to the mix, improving the recipe.`,
+        date: `November 18, 2015`,
+        score: 8.0
+      },
+      {
+        name: `Amanda Greever`,
+        reviewText: `I didn't find it amusing, and while I can appreciate the creativity, it's an hour and 40 minutes I wish I could take back.`,
+        date: `November 18, 2015`,
+        score: 8.0
+      },
+      {
+        name: `Matthew Lickona`,
+        reviewText: `The mannered, madcap proceedings are often delightful, occasionally silly, and here and there, gruesome and/or heartbreaking.`,
+        date: `December 20, 2016`,
+        score: 7.2
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 7.6
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 7.0
+      },
+    ]
   }
 ];
 

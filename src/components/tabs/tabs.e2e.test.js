@@ -1,6 +1,12 @@
 import React from "react";
-import renderer from "react-test-renderer";
-import MovieDetails from "./movie-details.jsx";
+import Enzyme, {shallow} from "enzyme";
+import Adapter from "enzyme-adapter-react-16";
+import Tabs from "./tabs.jsx";
+
+Enzyme.configure({
+  adapter: new Adapter()
+});
+
 
 const movieDetailsData = {
   title: `Lorem ipsum dolor sit amet`,
@@ -60,15 +66,19 @@ const movieDetailsData = {
   ]
 };
 
-it(`Should render movie details component`, () => {
-
-  const tree = renderer
-    .create(<MovieDetails
-      movieDetailsData={movieDetailsData}
-      onMovieCardTitleClick={() => { }}
-    />).toJSON();
-
-  expect(tree).toMatchSnapshot();
+it(`Should Details tab change state`, () => {
 
 
+  const mainComponent = shallow(
+      <Tabs
+        movieDetailsData={movieDetailsData}
+      />
+  );
+
+  mainComponent.find(`.movie-nav__link`);
+  // expect((mainComponent.state().activeTab === `Overview`).toBe(true));
+  // mainComponent.find(`.movie-nav__link`).at(0).simulate(`click`);
+  // mainComponent.find(`.movie-nav__link`).at(1).simulate(`click`);
+  // mainComponent.find(`.movie-nav__link`).at(2).simulate(`click`);
+  // expect(mainComponent.state()).toEqual({ activeTab: `Details` });
 });

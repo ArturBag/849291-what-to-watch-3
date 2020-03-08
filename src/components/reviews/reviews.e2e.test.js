@@ -1,6 +1,12 @@
 import React from "react";
-import renderer from "react-test-renderer";
-import MovieDetails from "./movie-details.jsx";
+import Enzyme, {shallow} from "enzyme";
+import Adapter from "enzyme-adapter-react-16";
+import Reviews from "./reviews.jsx";
+
+Enzyme.configure({
+  adapter: new Adapter()
+});
+
 
 const movieDetailsData = {
   title: `Lorem ipsum dolor sit amet`,
@@ -60,15 +66,51 @@ const movieDetailsData = {
   ]
 };
 
-it(`Should render movie details component`, () => {
 
-  const tree = renderer
-    .create(<MovieDetails
-      movieDetailsData={movieDetailsData}
-      onMovieCardTitleClick={() => { }}
-    />).toJSON();
+it(`Should Details tab be pressed`, () => {
+  const displayTab = jest.fn();
 
-  expect(tree).toMatchSnapshot();
+  const mainComponent = shallow(
+      <Reviews
+        movieDetailsData={movieDetailsData}
+        displayTab={displayTab}
+      />
+  );
 
+  const detailsLink = mainComponent.find(`.movie-nav__link`).at(1);
+  detailsLink.props().onClick();
+  expect(displayTab.mock.calls.length).toBe(1);
+
+});
+
+it(`Should Overview tab be pressed`, () => {
+  const displayTab = jest.fn();
+
+  const mainComponent = shallow(
+      <Reviews
+        movieDetailsData={movieDetailsData}
+        displayTab={displayTab}
+      />
+  );
+
+  const detailsLink = mainComponent.find(`.movie-nav__link`).at(1);
+  detailsLink.props().onClick();
+  expect(displayTab.mock.calls.length).toBe(1);
+
+});
+
+it(`Should Reviews tab be pressed`, () => {
+  const displayTab = jest.fn();
+
+  const mainComponent = shallow(
+      <Reviews
+        movieDetailsData={movieDetailsData}
+        displayTab={displayTab}
+      />
+  );
+
+  const reviewsLink = mainComponent.find(`.movie-nav__link`).at(2);
+  reviewsLink.props().onClick();
+  expect(displayTab.mock.calls.length).toBe(1);
 
 });
