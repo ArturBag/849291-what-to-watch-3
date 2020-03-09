@@ -2,6 +2,7 @@ import React from "react";
 import Enzyme, {shallow} from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import Tabs from "./tabs.jsx";
+// import Overview from "../overview/overview.jsx";
 
 Enzyme.configure({
   adapter: new Adapter()
@@ -23,7 +24,7 @@ const movieDetailsData = {
   poster: `img/the-grand-budapest-hotel-poster.jpg`,
   background: `img/bg-the-grand-budapest-hotel.jpg`,
   videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
-  runTime: {hours: 2, minutes: 44},
+  runTime: { hours: 2, minutes: 44 },
   reviews: [
     {
       name: `Kate Muir`,
@@ -66,7 +67,7 @@ const movieDetailsData = {
   ]
 };
 
-it(`Should Details tab change state`, () => {
+it(`Should Overview tab change state after click`, () => {
 
 
   const mainComponent = shallow(
@@ -75,10 +76,35 @@ it(`Should Details tab change state`, () => {
       />
   );
 
-  mainComponent.find(`.movie-nav__link`);
-  // expect((mainComponent.state().activeTab === `Overview`).toBe(true));
   // mainComponent.find(`.movie-nav__link`).at(0).simulate(`click`);
-  // mainComponent.find(`.movie-nav__link`).at(1).simulate(`click`);
-  // mainComponent.find(`.movie-nav__link`).at(2).simulate(`click`);
-  // expect(mainComponent.state()).toEqual({ activeTab: `Details` });
+  // expect(mainComponent.state(`activeTab`) === `Overview`).toBe(true);
+
+  // expect(mainComponent.state()).toEqual({activeTab: `Overview`});
+
 });
+
+// it(`Should Details tab change state after click`, () => {
+
+
+//   const mainComponent = shallow(
+//     <Tabs
+//       movieDetailsData={movieDetailsData}
+//     />
+//   );
+
+//   mainComponent.find(`.movie-nav__link`);
+
+// });
+
+// it(`Should Reviews tab change state after click`, () => {
+
+
+//   const mainComponent = shallow(
+//     <Tabs
+//       movieDetailsData={movieDetailsData}
+//     />
+//   );
+
+//   mainComponent.find(`.movie-nav__link`);
+
+// });
