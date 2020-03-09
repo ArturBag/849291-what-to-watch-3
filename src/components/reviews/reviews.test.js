@@ -66,7 +66,6 @@ it(`Should render Reviews component`, () => {
   const tree = renderer
     .create(<Reviews
       movieDetailsData={movieDetailsData}
-      displayTab={() => { }}
     />);
 
   expect(tree).toMatchSnapshot();

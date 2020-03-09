@@ -7,6 +7,9 @@ import filmsList from "../../mocks/films.js";
 class MovieDetails extends PureComponent {
   constructor(props) {
     super(props);
+    this.state = {
+      activeTab: `Overview`
+    };
 
   }
 
@@ -98,8 +101,40 @@ class MovieDetails extends PureComponent {
                 />
               </div>
               <div className="movie-card__desc">
+                <nav className="movie-nav movie-card__nav">
+                  <ul className="movie-nav__list">
+                    <li className={`movie-nav__item ${this.state.activeTab === `Overview` ? `movie-nav__item--active` : ``}`}>
+                      <a href="#" className="movie-nav__link"
+                        onClick={() => {
+                          this.setState({activeTab: `Overview`});
+                        }}
+                      >
+                        Overview
+                      </a>
+                    </li>
+                    <li className={`movie-nav__item ${this.state.activeTab === `Details` ? `movie-nav__item--active` : ``}`}>
+                      <a href="#" className="movie-nav__link"
+                        onClick={() => {
+                          this.setState({activeTab: `Details`});
+                        }}
+                      >
+                        Details
+                      </a>
+                    </li>
+                    <li className={`movie-nav__item ${this.state.activeTab === `Reviews` ? `movie-nav__item--active` : ``}`}>
+                      <a href="#" className="movie-nav__link"
+                        onClick={() => {
+                          this.setState({activeTab: `Reviews`});
+                        }}
+                      >
+                        Reviews
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
                 {<Tabs
                   movieDetailsData={movieDetailsData}
+                  activeTabState={this.state.activeTab}
                 />}
               </div>
             </div>

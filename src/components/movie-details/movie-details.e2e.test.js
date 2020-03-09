@@ -1,12 +1,11 @@
 import React from "react";
 import Enzyme, {shallow} from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
-import Reviews from "./reviews.jsx";
+import MovieDetails from "./movie-details.jsx";
 
 Enzyme.configure({
   adapter: new Adapter()
 });
-
 
 const movieDetailsData = {
   title: `Lorem ipsum dolor sit amet`,
@@ -66,51 +65,53 @@ const movieDetailsData = {
   ]
 };
 
+describe(`Tabs should change state`, () => {
 
-it(`Should Details tab be pressed`, () => {
-  const displayTab = jest.fn();
+  it(`Should Overview tab change state after click`, () => {
 
-  const mainComponent = shallow(
-      <Reviews
-        movieDetailsData={movieDetailsData}
-        displayTab={displayTab}
-      />
-  );
 
-  const detailsLink = mainComponent.find(`.movie-nav__link`).at(1);
-  detailsLink.props().onClick();
-  expect(displayTab.mock.calls.length).toBe(1);
+    const mainComponent = shallow(
+        <MovieDetails
+          movieDetailsData={movieDetailsData}
+          onMovieCardTitleClick={() => { }}
+        />
+    );
+
+    mainComponent.find(`.movie-nav__link`).at(0).simulate(`click`);
+    expect(mainComponent.state()).toEqual({activeTab: `Overview`});
+
+  });
+
+  it(`Should Details tab change state after click`, () => {
+
+
+    const mainComponent = shallow(
+        <MovieDetails
+          movieDetailsData={movieDetailsData}
+          onMovieCardTitleClick={() => { }}
+        />
+    );
+
+    mainComponent.find(`.movie-nav__link`).at(1).simulate(`click`);
+    expect(mainComponent.state()).toEqual({activeTab: `Details`});
+
+  });
+
+  it(`Should Reviews tab change state after click`, () => {
+
+
+    const mainComponent = shallow(
+        <MovieDetails
+          movieDetailsData={movieDetailsData}
+          onMovieCardTitleClick={() => { }}
+        />
+    );
+
+    mainComponent.find(`.movie-nav__link`).at(2).simulate(`click`);
+    expect(mainComponent.state()).toEqual({activeTab: `Reviews`});
+
+  });
+
 
 });
 
-it(`Should Overview tab be pressed`, () => {
-  const displayTab = jest.fn();
-
-  const mainComponent = shallow(
-      <Reviews
-        movieDetailsData={movieDetailsData}
-        displayTab={displayTab}
-      />
-  );
-
-  const detailsLink = mainComponent.find(`.movie-nav__link`).at(1);
-  detailsLink.props().onClick();
-  expect(displayTab.mock.calls.length).toBe(1);
-
-});
-
-it(`Should Reviews tab be pressed`, () => {
-  const displayTab = jest.fn();
-
-  const mainComponent = shallow(
-      <Reviews
-        movieDetailsData={movieDetailsData}
-        displayTab={displayTab}
-      />
-  );
-
-  const reviewsLink = mainComponent.find(`.movie-nav__link`).at(2);
-  reviewsLink.props().onClick();
-  expect(displayTab.mock.calls.length).toBe(1);
-
-});

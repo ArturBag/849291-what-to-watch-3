@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Reviews = (props) => {
-  const {movieDetailsData, displayTab} = props;
+  const {movieDetailsData} = props;
 
   const {reviews} = movieDetailsData;
 
@@ -10,37 +10,6 @@ const Reviews = (props) => {
 
   return (
     <React.Fragment>
-      <nav className="movie-nav movie-card__nav">
-        <ul className="movie-nav__list">
-          <li className="movie-nav__item">
-            <a href="#" className="movie-nav__link"
-              onClick={() => {
-                displayTab(`Overview`);
-              }}
-            >
-              Overview
-            </a>
-          </li>
-          <li className="movie-nav__item">
-            <a href="#" className="movie-nav__link"
-              onClick={()=>{
-                displayTab(`Details`);
-              }}
-            >
-              Details
-            </a>
-          </li>
-          <li className="movie-nav__item movie-nav__item--active">
-            <a href="#" className="movie-nav__link"
-              onClick={() => {
-                displayTab(`Reviews`);
-              }}
-            >
-              Reviews
-            </a>
-          </li>
-        </ul>
-      </nav>
       <div className="movie-card__reviews movie-card__row">
         <div className="movie-card__reviews-col">
           {reviews.slice(0, coulmnReviewsCount).map((it, index) => {
@@ -101,5 +70,4 @@ Reviews.propTypes = {
       score: PropTypes.number.isRequired,
     })).isRequired
   }).isRequired,
-  displayTab: PropTypes.func.isRequired,
 };
