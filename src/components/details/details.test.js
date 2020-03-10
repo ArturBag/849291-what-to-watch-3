@@ -1,6 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import MovieDetails from "./movie-details.jsx";
+import Details from "./details.jsx";
 
 const movieDetailsData = {
   title: `Lorem ipsum dolor sit amet`,
@@ -60,15 +60,14 @@ const movieDetailsData = {
   ]
 };
 
-it(`Should render movie details component`, () => {
+
+it(`Should render Details component`, () => {
 
   const tree = renderer
-    .create(<MovieDetails
+    .create(<Details
       movieDetailsData={movieDetailsData}
-      onMovieCardTitleClick={() => { }}
-    />).toJSON();
+    />);
 
   expect(tree).toMatchSnapshot();
-
 
 });

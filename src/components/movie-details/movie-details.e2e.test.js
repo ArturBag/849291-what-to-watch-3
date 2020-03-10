@@ -1,6 +1,11 @@
 import React from "react";
-import renderer from "react-test-renderer";
+import Enzyme, {shallow} from "enzyme";
+import Adapter from "enzyme-adapter-react-16";
 import MovieDetails from "./movie-details.jsx";
+
+Enzyme.configure({
+  adapter: new Adapter()
+});
 
 const movieDetailsData = {
   title: `Lorem ipsum dolor sit amet`,
@@ -60,15 +65,53 @@ const movieDetailsData = {
   ]
 };
 
-it(`Should render movie details component`, () => {
+describe(`Tabs should change state`, () => {
 
-  const tree = renderer
-    .create(<MovieDetails
-      movieDetailsData={movieDetailsData}
-      onMovieCardTitleClick={() => { }}
-    />).toJSON();
+  it(`Should Overview tab change state after click`, () => {
 
-  expect(tree).toMatchSnapshot();
+
+    const mainComponent = shallow(
+        <MovieDetails
+          movieDetailsData={movieDetailsData}
+          onMovieCardTitleClick={() => { }}
+        />
+    );
+
+    mainComponent.find(`.movie-nav__link`).at(0).simulate(`click`);
+    expect(mainComponent.state()).toEqual({activeTab: `Overview`});
+
+  });
+
+  it(`Should Details tab change state after click`, () => {
+
+
+    const mainComponent = shallow(
+        <MovieDetails
+          movieDetailsData={movieDetailsData}
+          onMovieCardTitleClick={() => { }}
+        />
+    );
+
+    mainComponent.find(`.movie-nav__link`).at(1).simulate(`click`);
+    expect(mainComponent.state()).toEqual({activeTab: `Details`});
+
+  });
+
+  it(`Should Reviews tab change state after click`, () => {
+
+
+    const mainComponent = shallow(
+        <MovieDetails
+          movieDetailsData={movieDetailsData}
+          onMovieCardTitleClick={() => { }}
+        />
+    );
+
+    mainComponent.find(`.movie-nav__link`).at(2).simulate(`click`);
+    expect(mainComponent.state()).toEqual({activeTab: `Reviews`});
+
+  });
 
 
 });
+

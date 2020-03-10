@@ -17,7 +17,48 @@ const filmsList = [
     starring: [`Bill Murray, Edward Norton, Jude Law, Willem Dafoe and other`],
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
-    videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
+    videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
+    runTime: {hours: 1, minutes: 22},
+    reviews: [
+      {
+        name: `Kate Muir`,
+        reviewText: `Discerning travellers and Wes Anderson fans will luxuriate in the glorious
+        Mittel-European kitsch of one of the director's funniest and most exquisitely designed movies in years.`,
+        date: `December 24, 2016`,
+        score: 2.9
+      },
+      {
+        name: `Bill Goodykoontz`,
+        reviewText: `Anderson's films are too precious for some, but for those of us willing to lose ourselves in them, they're a delight.
+        "The Grand Budapest Hotel" is no different, except that he has added a hint of gravitas to the mix, improving the recipe.`,
+        date: `November 18, 2015`,
+        score: 8.2
+      },
+      {
+        name: `Amanda Greever`,
+        reviewText: `I didn't find it amusing, and while I can appreciate the creativity, it's an hour and 40 minutes I wish I could take back.`,
+        date: `November 18, 2015`,
+        score: 8.4
+      },
+      {
+        name: `Matthew Lickona`,
+        reviewText: `The mannered, madcap proceedings are often delightful, occasionally silly, and here and there, gruesome and/or heartbreaking.`,
+        date: `December 20, 2016`,
+        score: 6.2
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 6.6
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 6.0
+      },
+    ]
   },
   {
     title: `Pirates`,
@@ -33,7 +74,47 @@ const filmsList = [
     starring: [`Kymani Burgess, Jaylin Cherry, Jacey Oliver, Conrad Wolf and other`],
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
-    videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
+    videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
+    reviews: [
+      {
+        name: `Kate Muir`,
+        reviewText: `Discerning travellers and Wes Anderson fans will luxuriate in the glorious
+        Mittel-European kitsch of one of the director's funniest and most exquisitely designed movies in years.`,
+        date: `December 24, 2016`,
+        score: 2.9
+      },
+      {
+        name: `Bill Goodykoontz`,
+        reviewText: `Anderson's films are too precious for some, but for those of us willing to lose ourselves in them, they're a delight.
+        "The Grand Budapest Hotel" is no different, except that he has added a hint of gravitas to the mix, improving the recipe.`,
+        date: `November 18, 2015`,
+        score: 8.2
+      },
+      {
+        name: `Amanda Greever`,
+        reviewText: `I didn't find it amusing, and while I can appreciate the creativity, it's an hour and 40 minutes I wish I could take back.`,
+        date: `November 18, 2015`,
+        score: 8.4
+      },
+      {
+        name: `Matthew Lickona`,
+        reviewText: `The mannered, madcap proceedings are often delightful, occasionally silly, and here and there, gruesome and/or heartbreaking.`,
+        date: `December 20, 2016`,
+        score: 6.2
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 6.6
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 6.0
+      },
+    ]
   },
   {
     title: `Misfits`,
@@ -49,7 +130,47 @@ const filmsList = [
     starring: [`Giovanny Mccullough, Leah Delacruz, Davon Terrell, Romeo Carr and other`],
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
-    videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
+    videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
+    reviews: [
+      {
+        name: `Kate Muir`,
+        reviewText: `Discerning travellers and Wes Anderson fans will luxuriate in the glorious
+        Mittel-European kitsch of one of the director's funniest and most exquisitely designed movies in years.`,
+        date: `December 24, 2016`,
+        score: 2.9
+      },
+      {
+        name: `Bill Goodykoontz`,
+        reviewText: `Anderson's films are too precious for some, but for those of us willing to lose ourselves in them, they're a delight.
+        "The Grand Budapest Hotel" is no different, except that he has added a hint of gravitas to the mix, improving the recipe.`,
+        date: `November 18, 2015`,
+        score: 8.2
+      },
+      {
+        name: `Amanda Greever`,
+        reviewText: `I didn't find it amusing, and while I can appreciate the creativity, it's an hour and 40 minutes I wish I could take back.`,
+        date: `November 18, 2015`,
+        score: 8.4
+      },
+      {
+        name: `Matthew Lickona`,
+        reviewText: `The mannered, madcap proceedings are often delightful, occasionally silly, and here and there, gruesome and/or heartbreaking.`,
+        date: `December 20, 2016`,
+        score: 6.2
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 6.6
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 6.0
+      },
+    ]
   },
   {
     title: `Terminal`,
@@ -65,7 +186,47 @@ const filmsList = [
     starring: [`Nasir Castaneda, Ariel Brooks, Lucia Compton and other`],
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
-    videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
+    videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
+    reviews: [
+      {
+        name: `Kate Muir`,
+        reviewText: `Discerning travellers and Wes Anderson fans will luxuriate in the glorious
+        Mittel-European kitsch of one of the director's funniest and most exquisitely designed movies in years.`,
+        date: `December 24, 2016`,
+        score: 2.9
+      },
+      {
+        name: `Bill Goodykoontz`,
+        reviewText: `Anderson's films are too precious for some, but for those of us willing to lose ourselves in them, they're a delight.
+        "The Grand Budapest Hotel" is no different, except that he has added a hint of gravitas to the mix, improving the recipe.`,
+        date: `November 18, 2015`,
+        score: 8.2
+      },
+      {
+        name: `Amanda Greever`,
+        reviewText: `I didn't find it amusing, and while I can appreciate the creativity, it's an hour and 40 minutes I wish I could take back.`,
+        date: `November 18, 2015`,
+        score: 8.4
+      },
+      {
+        name: `Matthew Lickona`,
+        reviewText: `The mannered, madcap proceedings are often delightful, occasionally silly, and here and there, gruesome and/or heartbreaking.`,
+        date: `December 20, 2016`,
+        score: 6.2
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 6.6
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 6.0
+      },
+    ]
   },
   {
     title: `Star Wars`,
@@ -81,7 +242,47 @@ const filmsList = [
     starring: [`Molly Reyes, Edward Norton, Mareli Moore, Makenna Henderson and other`],
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
-    videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
+    videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
+    reviews: [
+      {
+        name: `Kate Muir`,
+        reviewText: `Discerning travellers and Wes Anderson fans will luxuriate in the glorious
+        Mittel-European kitsch of one of the director's funniest and most exquisitely designed movies in years.`,
+        date: `December 24, 2016`,
+        score: 2.9
+      },
+      {
+        name: `Bill Goodykoontz`,
+        reviewText: `Anderson's films are too precious for some, but for those of us willing to lose ourselves in them, they're a delight.
+        "The Grand Budapest Hotel" is no different, except that he has added a hint of gravitas to the mix, improving the recipe.`,
+        date: `November 18, 2015`,
+        score: 8.2
+      },
+      {
+        name: `Amanda Greever`,
+        reviewText: `I didn't find it amusing, and while I can appreciate the creativity, it's an hour and 40 minutes I wish I could take back.`,
+        date: `November 18, 2015`,
+        score: 8.4
+      },
+      {
+        name: `Matthew Lickona`,
+        reviewText: `The mannered, madcap proceedings are often delightful, occasionally silly, and here and there, gruesome and/or heartbreaking.`,
+        date: `December 20, 2016`,
+        score: 6.2
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 6.6
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 6.0
+      },
+    ]
   },
   {
     title: `Forsage`,
@@ -97,7 +298,47 @@ const filmsList = [
     starring: [`Amaris Hess, Tobias Osborne, Samir Fitzpatrick, Baron Bolton and other`],
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
-    videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
+    videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
+    reviews: [
+      {
+        name: `Kate Muir`,
+        reviewText: `Discerning travellers and Wes Anderson fans will luxuriate in the glorious
+        Mittel-European kitsch of one of the director's funniest and most exquisitely designed movies in years.`,
+        date: `December 24, 2016`,
+        score: 2.9
+      },
+      {
+        name: `Bill Goodykoontz`,
+        reviewText: `Anderson's films are too precious for some, but for those of us willing to lose ourselves in them, they're a delight.
+        "The Grand Budapest Hotel" is no different, except that he has added a hint of gravitas to the mix, improving the recipe.`,
+        date: `November 18, 2015`,
+        score: 8.2
+      },
+      {
+        name: `Amanda Greever`,
+        reviewText: `I didn't find it amusing, and while I can appreciate the creativity, it's an hour and 40 minutes I wish I could take back.`,
+        date: `November 18, 2015`,
+        score: 8.4
+      },
+      {
+        name: `Matthew Lickona`,
+        reviewText: `The mannered, madcap proceedings are often delightful, occasionally silly, and here and there, gruesome and/or heartbreaking.`,
+        date: `December 20, 2016`,
+        score: 6.2
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 6.6
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 6.0
+      },
+    ]
   },
   {
     title: `Goal`,
@@ -113,7 +354,47 @@ const filmsList = [
     starring: [`Piper Mccann, Seamus Ashley, Jude Law, Lila Waters and other`],
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
-    videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
+    videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
+    reviews: [
+      {
+        name: `Kate Muir`,
+        reviewText: `Discerning travellers and Wes Anderson fans will luxuriate in the glorious
+        Mittel-European kitsch of one of the director's funniest and most exquisitely designed movies in years.`,
+        date: `December 24, 2016`,
+        score: 2.9
+      },
+      {
+        name: `Bill Goodykoontz`,
+        reviewText: `Anderson's films are too precious for some, but for those of us willing to lose ourselves in them, they're a delight.
+        "The Grand Budapest Hotel" is no different, except that he has added a hint of gravitas to the mix, improving the recipe.`,
+        date: `November 18, 2015`,
+        score: 8.2
+      },
+      {
+        name: `Amanda Greever`,
+        reviewText: `I didn't find it amusing, and while I can appreciate the creativity, it's an hour and 40 minutes I wish I could take back.`,
+        date: `November 18, 2015`,
+        score: 8.4
+      },
+      {
+        name: `Matthew Lickona`,
+        reviewText: `The mannered, madcap proceedings are often delightful, occasionally silly, and here and there, gruesome and/or heartbreaking.`,
+        date: `December 20, 2016`,
+        score: 6.2
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 6.6
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 6.0
+      },
+    ]
   },
   {
     title: `New Yorker`,
@@ -129,7 +410,47 @@ const filmsList = [
     starring: [`Franklin Sosa, Abby Beasley, Jovan Lang and other`],
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
-    videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
+    videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
+    reviews: [
+      {
+        name: `Kate Muir`,
+        reviewText: `Discerning travellers and Wes Anderson fans will luxuriate in the glorious
+        Mittel-European kitsch of one of the director's funniest and most exquisitely designed movies in years.`,
+        date: `December 24, 2016`,
+        score: 2.9
+      },
+      {
+        name: `Bill Goodykoontz`,
+        reviewText: `Anderson's films are too precious for some, but for those of us willing to lose ourselves in them, they're a delight.
+        "The Grand Budapest Hotel" is no different, except that he has added a hint of gravitas to the mix, improving the recipe.`,
+        date: `November 18, 2015`,
+        score: 8.2
+      },
+      {
+        name: `Amanda Greever`,
+        reviewText: `I didn't find it amusing, and while I can appreciate the creativity, it's an hour and 40 minutes I wish I could take back.`,
+        date: `November 18, 2015`,
+        score: 8.4
+      },
+      {
+        name: `Matthew Lickona`,
+        reviewText: `The mannered, madcap proceedings are often delightful, occasionally silly, and here and there, gruesome and/or heartbreaking.`,
+        date: `December 20, 2016`,
+        score: 6.2
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 6.6
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 6.0
+      },
+    ]
   }
 ];
 

@@ -49,6 +49,7 @@ class App extends PureComponent {
       return (
         <MovieDetails
           movieDetailsData={movieDetailsData}
+          onMovieCardTitleClick={movieCardTitleHandler}
         />
       );
     }
@@ -58,6 +59,18 @@ class App extends PureComponent {
   }
 
   render() {
+
+    const movieCardTitleHandler = (evt, title) => {
+      evt.preventDefault();
+
+      const chosedTitle = title;
+      const indexOfChoosedMovie = filmsList.findIndex((it) => it.title === chosedTitle);
+
+      this.setState({
+        activeComponent: `MovieDetails`,
+        activeMovieDetailsIndex: indexOfChoosedMovie
+      });
+    };
 
     const {moviesList} = this.props;
     const movieDetailsData = moviesList[this.state.activeMovieDetailsIndex];
@@ -71,6 +84,7 @@ class App extends PureComponent {
           <Route exact path="/dev-film">
             <MovieDetails
               movieDetailsData={movieDetailsData}
+              onMovieCardTitleClick={movieCardTitleHandler}
             />
           </Route>
         </Switch>
