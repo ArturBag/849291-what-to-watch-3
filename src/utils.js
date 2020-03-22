@@ -16,3 +16,7 @@ export const getRatingLevel = (rating) => {
 
   return level;
 };
+
+export const extend = (a, b) => {
+  return Object.assign({}, a, b);
+};
