@@ -10,19 +10,19 @@ const initialState = {
 };
 
 const ActionType = {
-  FILTER: {
+  // FILTER: {
 
-    ALL_GENRES: `All genres`,
-    COMEDIES: `Comedies`,
-    CRIME: `Crime`,
-    DOCUMENTARY: `Documentary`,
-    DRAMAS: `Dramas`,
-    HORROR: `Horror`,
-    KIDS_AND_FAMILY: `Kids & Family`,
-    ROMANCE: `Romance`,
-    SCI_FI: `Sci-Fi`,
-    THRILLERS: `Thrillers`
-  },
+  //   ALL_GENRES: `All genres`,
+  //   COMEDIES: `Comedies`,
+  //   CRIME: `Crime`,
+  //   DOCUMENTARY: `Documentary`,
+  //   DRAMAS: `Dramas`,
+  //   HORROR: `Horror`,
+  //   KIDS_AND_FAMILY: `Kids & Family`,
+  //   ROMANCE: `Romance`,
+  //   SCI_FI: `Sci-Fi`,
+  //   THRILLERS: `Thrillers`
+  // },
   ON_MOVIE_CARD_TITLE_CLICK: `ON_MOVIE_CARD_TITLE_CLICK`,
   ON_GENRE_TYPE_CLICK: `ON_GENRE_TYPE_CLICK`
 };
@@ -120,16 +120,18 @@ const ActionCreator = {
   onGenreTypeClick: (genre) => {
 
 
-    const getActionType = () => {
-      const index = Object.values(ActionType.FILTER).findIndex((it) => {
-        return it === genre;
-      });
+    // const getActionType = () => {
+    //   const index = Object.values(ActionType.FILTER).findIndex((it) => {
+    //     return it === genre;
+    //   });
 
-      return Object.keys(ActionType.FILTER)[index];
-    };
+    //   return Object.keys(ActionType.FILTER)[index];
+    // };
+
+    // console.log(getFilteredFilmsList(genre))
 
     return {
-      type: ActionType.FILTER[getActionType()],
+      type: ActionType.ON_GENRE_TYPE_CLICK,
       activeGenre: genre,
       moviesList: getFilteredFilmsList(genre)
     };
@@ -138,6 +140,8 @@ const ActionCreator = {
 
 
 const reducer = (state = initialState, action) => {
+
+  // console.log(action)
 
   switch (action.type) {
     case ActionType.ON_MOVIE_CARD_TITLE_CLICK:
