@@ -70,9 +70,9 @@ class App extends PureComponent {
 }
 
 App.propTypes = {
-  title: PropTypes.PropTypes.string.isRequired,
-  genre: PropTypes.PropTypes.string.isRequired,
-  issuedDate: PropTypes.number.isRequired,
+  // title: PropTypes.PropTypes.string.isRequired,
+  // genre: PropTypes.PropTypes.string.isRequired,
+  // issuedDate: PropTypes.number.isRequired,
   moviesList: PropTypes.array.isRequired,
   activeMovieDetailsIndex: PropTypes.number.isRequired,
   onMovieCardTitleClick: PropTypes.func.isRequired,
@@ -82,6 +82,7 @@ App.propTypes = {
 const mapStateToProps = (state) => ({
   activeComponent: state.activeComponent,
   activeMovieDetailsIndex: state.activeMovieDetailsIndex,
+  moviesList: state.moviesList
 });
 
 const mapDispatchToProps = (dispatch) => ({

@@ -1,29 +1,35 @@
 import React from "react";
 import MoviesList from "../movies-list/movies-list.jsx";
 import PropTypes from "prop-types";
-import {connect} from "react-redux";
-import {ActionCreator} from "../../reducer.js";
+import { connect } from "react-redux";
+import { ActionCreator } from "../../reducer.js";
+
+
+const genresListItems = [`All genres`, `Comedies`, `Crime`, `Documentary`, `Dramas`,
+  `Horror`, `Kids & Family`, `Romance`, `Sci-Fi`, `Thrillers`];
 
 const GenresList = (props) => {
 
-  const {moviesList, activeGenre, onMovieCardTitleClick, onGenreTypeClick} = props;
+  const { moviesList, activeGenre, onMovieCardTitleClick, onGenreTypeClick } = props;
+  console.log(activeGenre)
+  const genresListData = genresListItems.map((genre, index) => {
 
-  const genresListData = moviesList.map((movie, index) => {
 
-    const activeGenreClass = movie.genre === activeGenre ? `catalog__genres-item--active` : ``;
+    const activeGenreClass = genre === activeGenre ? `catalog__genres-item--active` : ``;
 
     return (
-      <li key={movie.title + index} className={`catalog__genres-item ${activeGenreClass}`}>
+      <li key={genre + index} className={`catalog__genres-item ${activeGenreClass}`}>
         <a href="#" className="catalog__genres-link"
-          onClick={()=>{
-            onGenreTypeClick(movie.genre);
+          onClick={() => {
+            onGenreTypeClick(genre);
           }}
         >
-          {movie.genre}
+          {genre}
         </a>
       </li>
     );
   });
+
 
   return (
     <React.Fragment>
@@ -55,7 +61,7 @@ GenresList.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-  genre: state.genre,
+  activeGenre: state.activeGenre,
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -64,6 +70,6 @@ const mapDispatchToProps = (dispatch) => ({
   }
 });
 
-export {GenresList};
+export { GenresList };
 
 export default connect(mapStateToProps, mapDispatchToProps)(GenresList);
