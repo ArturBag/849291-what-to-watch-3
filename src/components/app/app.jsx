@@ -1,6 +1,6 @@
-import React, { PureComponent } from "react";
+import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
-import { Switch, Route, BrowserRouter } from "react-router-dom";
+import {Switch, Route, BrowserRouter} from "react-router-dom";
 import {connect} from "react-redux";
 import filmsList from "../../mocks/films.js";
 import {ActionCreator} from "../../reducer.js";
@@ -29,7 +29,7 @@ class App extends PureComponent {
           title={MovieHeader.TITLE}
           genre={MovieHeader.GENRE}
           issuedDate={MovieHeader.ISSUED_DATE}
-          moviesList={moviesList}
+          moviesList={moviesList.slice(0, 9)}
           onMovieCardTitleClick={onMovieCardTitleClick}
         />
       );
@@ -37,6 +37,7 @@ class App extends PureComponent {
       return (
         <MovieDetails
           movieDetailsData={movieDetailsData}
+          moviesList={moviesList}
           onMovieCardTitleClick={onMovieCardTitleClick}
         />
       );
@@ -60,6 +61,7 @@ class App extends PureComponent {
           <Route exact path="/dev-film">
             <MovieDetails
               movieDetailsData={movieDetailsData}
+              moviesList={moviesList}
               onMovieCardTitleClick={onMovieCardTitleClick}
             />
           </Route>
@@ -70,9 +72,6 @@ class App extends PureComponent {
 }
 
 App.propTypes = {
-  // title: PropTypes.PropTypes.string.isRequired,
-  // genre: PropTypes.PropTypes.string.isRequired,
-  // issuedDate: PropTypes.number.isRequired,
   moviesList: PropTypes.array.isRequired,
   activeMovieDetailsIndex: PropTypes.number.isRequired,
   onMovieCardTitleClick: PropTypes.func.isRequired,
@@ -86,8 +85,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  onMovieCardTitleClick(evt, title) {
-    dispatch(ActionCreator.onMovieCardTitleClick(evt, title));
+  onMovieCardTitleClick(evt, title, moviesList) {
+    dispatch(ActionCreator.onMovieCardTitleClick(evt, title, moviesList));
   }
 
 });

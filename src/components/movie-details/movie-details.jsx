@@ -14,7 +14,7 @@ class MovieDetails extends PureComponent {
   }
 
   render() {
-    const {movieDetailsData, onMovieCardTitleClick} = this.props;
+    const {movieDetailsData, moviesList, onMovieCardTitleClick} = this.props;
 
     const {title, genre, issuedDate, poster, background} = movieDetailsData;
 
@@ -28,6 +28,7 @@ class MovieDetails extends PureComponent {
           preview={it.preview}
           videoSrc={it.videoSrc}
           id={i}
+          moviesList={moviesList}
           onMovieCardTitleClick={onMovieCardTitleClick}
         />);
     });
@@ -175,6 +176,7 @@ MovieDetails.propTypes = {
     poster: PropTypes.string.isRequired,
     background: PropTypes.string.isRequired
   }).isRequired,
+  moviesList: PropTypes.array.isRequired,
   onMovieCardTitleClick: PropTypes.func.isRequired
 };
 

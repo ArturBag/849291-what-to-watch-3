@@ -1,17 +1,15 @@
 import React from "react";
 import MoviesList from "../movies-list/movies-list.jsx";
 import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import { ActionCreator } from "../../reducer.js";
+import {connect} from "react-redux";
+import {ActionCreator} from "../../reducer.js";
+import {genresListItems} from "../../const.js";
 
-
-const genresListItems = [`All genres`, `Comedies`, `Crime`, `Documentary`, `Dramas`,
-  `Horror`, `Kids & Family`, `Romance`, `Sci-Fi`, `Thrillers`];
 
 const GenresList = (props) => {
 
-  const { moviesList, activeGenre, onMovieCardTitleClick, onGenreTypeClick } = props;
-  console.log(activeGenre)
+  const {moviesList, activeGenre, onMovieCardTitleClick, onGenreTypeClick} = props;
+
   const genresListData = genresListItems.map((genre, index) => {
 
 
@@ -70,6 +68,6 @@ const mapDispatchToProps = (dispatch) => ({
   }
 });
 
-export { GenresList };
+export {GenresList};
 
 export default connect(mapStateToProps, mapDispatchToProps)(GenresList);

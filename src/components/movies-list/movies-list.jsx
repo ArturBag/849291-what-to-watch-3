@@ -13,6 +13,7 @@ const MoviesList = (props) => {
         preview={it.preview}
         videoSrc={it.videoSrc}
         id={i}
+        moviesList={moviesList}
         onMovieCardTitleClick={onMovieCardTitleClick}
       />)
   );

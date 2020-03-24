@@ -1,5 +1,22 @@
-import { extend } from "./utils.js";
+import {extend} from "./utils.js";
 import filmsList from "./mocks/films.js";
+
+const uniqueGenresList = [];
+const uniqueMovies = [];
+filmsList.forEach((it) => {
+
+  if (uniqueGenresList.includes(it.genre)) {
+    return false;
+  } else {
+    uniqueGenresList.push(it.genre);
+
+    uniqueMovies.push(it);
+
+  }
+
+  return 0;
+
+});
 
 
 const initialState = {
@@ -10,130 +27,58 @@ const initialState = {
 };
 
 const ActionType = {
-  // FILTER: {
-
-  //   ALL_GENRES: `All genres`,
-  //   COMEDIES: `Comedies`,
-  //   CRIME: `Crime`,
-  //   DOCUMENTARY: `Documentary`,
-  //   DRAMAS: `Dramas`,
-  //   HORROR: `Horror`,
-  //   KIDS_AND_FAMILY: `Kids & Family`,
-  //   ROMANCE: `Romance`,
-  //   SCI_FI: `Sci-Fi`,
-  //   THRILLERS: `Thrillers`
-  // },
   ON_MOVIE_CARD_TITLE_CLICK: `ON_MOVIE_CARD_TITLE_CLICK`,
   ON_GENRE_TYPE_CLICK: `ON_GENRE_TYPE_CLICK`
 };
 
-// const ActionType = {
-
-//   FILTER_ALL_GENRES: `All genres`,
-//   FILTER_COMEDIES: `Comedies`,
-//   FILTER_CRIME: `Crime`,
-//   FILTER_DOCUMENTARY: `Documentary`,
-//   FILTER_DRAMAS: `Dramas`,
-//   FILTER_HORROR: `Horror`,
-//   FILTER_KIDS_AND_FAMILY: `Kids & Family`,
-//   FILTER_ROMANCE: `Romance`,
-//   FILTER_SCI_FI: `Sci-Fi`,
-//   FILTER_THRILLERS: `Thrillers`,
-//   ON_MOVIE_CARD_TITLE_CLICK: `ON_MOVIE_CARD_TITLE_CLICK`,
-//   ON_GENRE_TYPE_CLICK: `ON_GENRE_TYPE_CLICK`
-// };
-
-// console.log(Object.values(ActionType))
 
 const getFilteredFilmsList = (genre) => {
-  return filmsList.filter((movie) => movie.genre === genre);
+  let movieGenre = ``;
+  switch (genre) {
+    case `Comedies`:
+      movieGenre = `Comedy`;
+      break;
+
+    case `Dramas`:
+      movieGenre = `Drama`;
+      break;
+
+    case `Thrillers`:
+      movieGenre = `Thriller`;
+      break;
+
+    default: movieGenre = genre;
+
+  }
+
+  return filmsList.filter((movie) => movie.genre === movieGenre);
 };
 
 
 const ActionCreator = {
 
-  // applyFilter: {
-  //   all: () => ({
-  //     type: ActionType.filter.ALL_GENRES,
-  //     activeGenre: ActionType.filter.ALL_GENRES,
-  //     payload: filmsList
-  //   }),
-  //   comedies: () => ({
-  //     type: ActionType.filter.COMEDIES,
-  //     activeGenre: ActionType.filter.COMEDIES,
-  //     payload: getFilteredFilmsList(ActionType.filter.COMEDIES)
-  //   }),
-  //   crime: () => ({
-  //     type: ActionType.filter.CRIME,
-  //     activeGenre: ActionType.filter.CRIME,
-  //     payload: getFilteredFilmsList(ActionType.filter.CRIME)
-  //   }),
-  //   documentary: () => ({
-  //     type: ActionType.filter.DOCUMENTARY,
-  //     activeGenre: ActionType.filter.DOCUMENTARY,
-  //     payload: getFilteredFilmsList(ActionType.filter.DOCUMENTARY)
-  //   }),
-  //   dramas: () => ({
-  //     type: ActionType.filter.DRAMAS,
-  //     activeGenre: ActionType.filter.DRAMAS,
-  //     payload: getFilteredFilmsList(ActionType.filter.DRAMAS)
-  //   }),
-  //   horror: () => ({
-  //     type: ActionType.filter.HORROR,
-  //     activeGenre: ActionType.filter.HORROR,
-  //     payload: getFilteredFilmsList(ActionType.filter.HORROR)
-  //   }),
-  //   kidsAndFamily: () => ({
-  //     type: ActionType.filter.KIDS_AND_FAMILY,
-  //     activeGenre: ActionType.filter.KIDS_AND_FAMILY,
-  //     payload: getFilteredFilmsList(ActionType.filter.KIDS_AND_FAMILY)
-  //   }),
-  //   romance: () => ({
-  //     type: ActionType.filter.ROMANCE,
-  //     activeGenre: ActionType.filter.ROMANCE,
-  //     payload: getFilteredFilmsList(ActionType.filter.ROMANCE)
-  //   }),
-  //   sciFi: () => ({
-  //     type: ActionType.filter.SCI_FI,
-  //     activeGenre: ActionType.filter.SCI_FI,
-  //     payload: getFilteredFilmsList(ActionType.filter.SCI_FI)
-  //   }),
-  //   trillers: () => ({
-  //     type: ActionType.filter.THRILLERS,
-  //     activeGenre: ActionType.filter.THRILLERS,
-  //     payload: getFilteredFilmsList(ActionType.filter.THRILLERS)
-  //   }),
-
-  // },
-  onMovieCardTitleClick: (evt, title) => {
+  onMovieCardTitleClick: (evt, title, moviesList) => {
     evt.preventDefault();
 
     const chosedTitle = title;
-    const indexOfChoosedMovie = filmsList.findIndex((it) => it.title === chosedTitle);
+    const indexOfChoosedMovie = moviesList.findIndex((it) => it.title === chosedTitle);
 
     return {
       type: ActionType.ON_MOVIE_CARD_TITLE_CLICK,
       activeComponent: `MovieDetails`,
-      activeMovieDetailsIndex: indexOfChoosedMovie
+      activeMovieDetailsIndex: indexOfChoosedMovie,
     };
   },
   onGenreTypeClick: (genre) => {
 
 
-    // const getActionType = () => {
-    //   const index = Object.values(ActionType.FILTER).findIndex((it) => {
-    //     return it === genre;
-    //   });
+    const filteredMovies = genre === `All genres` ? uniqueMovies : getFilteredFilmsList(genre);
 
-    //   return Object.keys(ActionType.FILTER)[index];
-    // };
-
-    // console.log(getFilteredFilmsList(genre))
 
     return {
       type: ActionType.ON_GENRE_TYPE_CLICK,
       activeGenre: genre,
-      moviesList: getFilteredFilmsList(genre)
+      moviesList: filteredMovies
     };
   }
 };
@@ -141,7 +86,6 @@ const ActionCreator = {
 
 const reducer = (state = initialState, action) => {
 
-  // console.log(action)
 
   switch (action.type) {
     case ActionType.ON_MOVIE_CARD_TITLE_CLICK:
@@ -162,4 +106,4 @@ const reducer = (state = initialState, action) => {
   return state;
 };
 
-export { reducer, ActionType, ActionCreator };
+export {reducer, ActionType, ActionCreator};

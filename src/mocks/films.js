@@ -58,7 +58,7 @@ const filmsList = [
   },
   {
     title: `Bohemian Rhapsody`,
-    genre: `Crime`,
+    genre: `Documentary`,
     issuedDate: 2014,
     ratingCount: 100,
     preview: `img/bohemian-rhapsody.jpg`,
@@ -345,7 +345,7 @@ const filmsList = [
   },
   {
     title: `Orlando`,
-    genre: `Kids & Family`,
+    genre: `Comedy`,
     issuedDate: 2018,
     ratingCount: 455,
     preview: `img/orlando.jpg`,
@@ -403,6 +403,234 @@ const filmsList = [
   {
     title: `War of the Worlds`,
     genre: `Crime`,
+    issuedDate: 2020,
+    ratingCount: 320,
+    preview: `img/war-of-the-worlds.jpg`,
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Nunc blandit bibendum elit. Donec libero mauris, luctus sit amet rhoncus ac,
+    ultrices ut elit.`,
+    rating: 6.8,
+    director: `Janessa Sims`,
+    starring: [`Charlie Brewer`, `Edward Norton`, `Marley Arellano`, `Zion Fitzpatrick`, `Edward Norton`, `Jude Law`, `Willem Dafoe`, `Jeff Goldblum`],
+    poster: `img/the-grand-budapest-hotel-poster.jpg`,
+    background: `img/bg-the-grand-budapest-hotel.jpg`,
+    videoSrc: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
+    runTime: {hours: 3, minutes: 39},
+    reviews: [
+      {
+        name: `Kate Muir`,
+        reviewText: `Discerning travellers and Wes Anderson fans will luxuriate in the glorious
+        Mittel-European kitsch of one of the director's funniest and most exquisitely designed movies in years.`,
+        date: `December 24, 2016`,
+        score: 8.9
+      },
+      {
+        name: `Bill Goodykoontz`,
+        reviewText: `Anderson's films are too precious for some, but for those of us willing to lose ourselves in them, they're a delight.
+        "The Grand Budapest Hotel" is no different, except that he has added a hint of gravitas to the mix, improving the recipe.`,
+        date: `November 18, 2015`,
+        score: 8.0
+      },
+      {
+        name: `Amanda Greever`,
+        reviewText: `I didn't find it amusing, and while I can appreciate the creativity, it's an hour and 40 minutes I wish I could take back.`,
+        date: `November 18, 2015`,
+        score: 8.0
+      },
+      {
+        name: `Matthew Lickona`,
+        reviewText: `The mannered, madcap proceedings are often delightful, occasionally silly, and here and there, gruesome and/or heartbreaking.`,
+        date: `December 20, 2016`,
+        score: 7.2
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 7.6
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 7.0
+      },
+    ]
+  },
+  {
+    title: `War of the Worlds`,
+    genre: `Sci-Fi`,
+    issuedDate: 2020,
+    ratingCount: 320,
+    preview: `img/war-of-the-worlds.jpg`,
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Nunc blandit bibendum elit. Donec libero mauris, luctus sit amet rhoncus ac,
+    ultrices ut elit.`,
+    rating: 6.8,
+    director: `Janessa Sims`,
+    starring: [`Charlie Brewer`, `Edward Norton`, `Marley Arellano`, `Zion Fitzpatrick`, `Edward Norton`, `Jude Law`, `Willem Dafoe`, `Jeff Goldblum`],
+    poster: `img/the-grand-budapest-hotel-poster.jpg`,
+    background: `img/bg-the-grand-budapest-hotel.jpg`,
+    videoSrc: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
+    runTime: {hours: 3, minutes: 39},
+    reviews: [
+      {
+        name: `Kate Muir`,
+        reviewText: `Discerning travellers and Wes Anderson fans will luxuriate in the glorious
+        Mittel-European kitsch of one of the director's funniest and most exquisitely designed movies in years.`,
+        date: `December 24, 2016`,
+        score: 8.9
+      },
+      {
+        name: `Bill Goodykoontz`,
+        reviewText: `Anderson's films are too precious for some, but for those of us willing to lose ourselves in them, they're a delight.
+        "The Grand Budapest Hotel" is no different, except that he has added a hint of gravitas to the mix, improving the recipe.`,
+        date: `November 18, 2015`,
+        score: 8.0
+      },
+      {
+        name: `Amanda Greever`,
+        reviewText: `I didn't find it amusing, and while I can appreciate the creativity, it's an hour and 40 minutes I wish I could take back.`,
+        date: `November 18, 2015`,
+        score: 8.0
+      },
+      {
+        name: `Matthew Lickona`,
+        reviewText: `The mannered, madcap proceedings are often delightful, occasionally silly, and here and there, gruesome and/or heartbreaking.`,
+        date: `December 20, 2016`,
+        score: 7.2
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 7.6
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 7.0
+      },
+    ]
+  },
+  {
+    title: `Romance TEST title`,
+    genre: `Romance`,
+    issuedDate: 2020,
+    ratingCount: 320,
+    preview: `img/war-of-the-worlds.jpg`,
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Nunc blandit bibendum elit. Donec libero mauris, luctus sit amet rhoncus ac,
+    ultrices ut elit.`,
+    rating: 6.8,
+    director: `Janessa Sims`,
+    starring: [`Charlie Brewer`, `Edward Norton`, `Marley Arellano`, `Zion Fitzpatrick`, `Edward Norton`, `Jude Law`, `Willem Dafoe`, `Jeff Goldblum`],
+    poster: `img/the-grand-budapest-hotel-poster.jpg`,
+    background: `img/bg-the-grand-budapest-hotel.jpg`,
+    videoSrc: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
+    runTime: {hours: 3, minutes: 39},
+    reviews: [
+      {
+        name: `Kate Muir`,
+        reviewText: `Discerning travellers and Wes Anderson fans will luxuriate in the glorious
+        Mittel-European kitsch of one of the director's funniest and most exquisitely designed movies in years.`,
+        date: `December 24, 2016`,
+        score: 8.9
+      },
+      {
+        name: `Bill Goodykoontz`,
+        reviewText: `Anderson's films are too precious for some, but for those of us willing to lose ourselves in them, they're a delight.
+        "The Grand Budapest Hotel" is no different, except that he has added a hint of gravitas to the mix, improving the recipe.`,
+        date: `November 18, 2015`,
+        score: 8.0
+      },
+      {
+        name: `Amanda Greever`,
+        reviewText: `I didn't find it amusing, and while I can appreciate the creativity, it's an hour and 40 minutes I wish I could take back.`,
+        date: `November 18, 2015`,
+        score: 8.0
+      },
+      {
+        name: `Matthew Lickona`,
+        reviewText: `The mannered, madcap proceedings are often delightful, occasionally silly, and here and there, gruesome and/or heartbreaking.`,
+        date: `December 20, 2016`,
+        score: 7.2
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 7.6
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 7.0
+      },
+    ]
+  },
+  {
+    title: `Thriller TEST title`,
+    genre: `Thriller`,
+    issuedDate: 2020,
+    ratingCount: 320,
+    preview: `img/war-of-the-worlds.jpg`,
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Nunc blandit bibendum elit. Donec libero mauris, luctus sit amet rhoncus ac,
+    ultrices ut elit.`,
+    rating: 6.8,
+    director: `Janessa Sims`,
+    starring: [`Charlie Brewer`, `Edward Norton`, `Marley Arellano`, `Zion Fitzpatrick`, `Edward Norton`, `Jude Law`, `Willem Dafoe`, `Jeff Goldblum`],
+    poster: `img/the-grand-budapest-hotel-poster.jpg`,
+    background: `img/bg-the-grand-budapest-hotel.jpg`,
+    videoSrc: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
+    runTime: {hours: 3, minutes: 39},
+    reviews: [
+      {
+        name: `Kate Muir`,
+        reviewText: `Discerning travellers and Wes Anderson fans will luxuriate in the glorious
+        Mittel-European kitsch of one of the director's funniest and most exquisitely designed movies in years.`,
+        date: `December 24, 2016`,
+        score: 8.9
+      },
+      {
+        name: `Bill Goodykoontz`,
+        reviewText: `Anderson's films are too precious for some, but for those of us willing to lose ourselves in them, they're a delight.
+        "The Grand Budapest Hotel" is no different, except that he has added a hint of gravitas to the mix, improving the recipe.`,
+        date: `November 18, 2015`,
+        score: 8.0
+      },
+      {
+        name: `Amanda Greever`,
+        reviewText: `I didn't find it amusing, and while I can appreciate the creativity, it's an hour and 40 minutes I wish I could take back.`,
+        date: `November 18, 2015`,
+        score: 8.0
+      },
+      {
+        name: `Matthew Lickona`,
+        reviewText: `The mannered, madcap proceedings are often delightful, occasionally silly, and here and there, gruesome and/or heartbreaking.`,
+        date: `December 20, 2016`,
+        score: 7.2
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 7.6
+      },
+      {
+        name: `Paula Fleri-Soler`,
+        reviewText: `It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.`,
+        date: `December 20, 2016`,
+        score: 7.0
+      },
+    ]
+  },
+  {
+    title: `Horror TEST title`,
+    genre: `Horror`,
     issuedDate: 2020,
     ratingCount: 320,
     preview: `img/war-of-the-worlds.jpg`,
