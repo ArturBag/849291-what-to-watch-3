@@ -495,7 +495,7 @@ describe(`Render App`, () => {
       .create(
           <Provider store={store}>
             <App
-              activeComponent={`Main`}
+              activeComponent={`MovieDetails`}
               activeMovieDetailsIndex={1}
               moviesList={filmsList}
               onMovieCardTitleClick={()=>{}}

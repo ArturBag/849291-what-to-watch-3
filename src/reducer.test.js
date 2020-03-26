@@ -1,4 +1,4 @@
-import { reducer, ActionCreator, ActionType } from "./reducer.js";
+import {reducer, ActionType} from "./reducer.js";
 
 const filmsList = [
   {
@@ -16,7 +16,7 @@ const filmsList = [
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
     videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
-    runTime: { hours: 1, minutes: 39 },
+    runTime: {hours: 1, minutes: 39},
     reviews: [
       {
         name: `Kate Muir`,
@@ -74,7 +74,7 @@ const filmsList = [
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
     videoSrc: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
-    runTime: { hours: 2, minutes: 22 },
+    runTime: {hours: 2, minutes: 22},
     reviews: [
       {
         name: `Kate Muir`,
@@ -131,7 +131,7 @@ const filmsList = [
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
     videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
-    runTime: { hours: 1, minutes: 11 },
+    runTime: {hours: 1, minutes: 11},
     reviews: [
       {
         name: `Kate Muir`,
@@ -189,7 +189,7 @@ const filmsList = [
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
     videoSrc: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
-    runTime: { hours: 2, minutes: 45 },
+    runTime: {hours: 2, minutes: 45},
     reviews: [
       {
         name: `Kate Muir`,
@@ -246,7 +246,7 @@ const filmsList = [
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
     videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
-    runTime: { hours: 1, minutes: 39 },
+    runTime: {hours: 1, minutes: 39},
     reviews: [
       {
         name: `Kate Muir`,
@@ -303,7 +303,7 @@ const filmsList = [
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
     videoSrc: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
-    runTime: { hours: 1, minutes: 32 },
+    runTime: {hours: 1, minutes: 32},
     reviews: [
       {
         name: `Kate Muir`,
@@ -360,7 +360,7 @@ const filmsList = [
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
     videoSrc: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
-    runTime: { hours: 3, minutes: 11 },
+    runTime: {hours: 3, minutes: 11},
     reviews: [
       {
         name: `Kate Muir`,
@@ -417,7 +417,7 @@ const filmsList = [
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
     videoSrc: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
-    runTime: { hours: 3, minutes: 39 },
+    runTime: {hours: 3, minutes: 39},
     reviews: [
       {
         name: `Kate Muir`,
@@ -474,7 +474,7 @@ const filmsList = [
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
     videoSrc: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
-    runTime: { hours: 3, minutes: 39 },
+    runTime: {hours: 3, minutes: 39},
     reviews: [
       {
         name: `Kate Muir`,
@@ -531,7 +531,7 @@ const filmsList = [
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
     videoSrc: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
-    runTime: { hours: 3, minutes: 39 },
+    runTime: {hours: 3, minutes: 39},
     reviews: [
       {
         name: `Kate Muir`,
@@ -588,7 +588,7 @@ const filmsList = [
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
     videoSrc: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
-    runTime: { hours: 3, minutes: 39 },
+    runTime: {hours: 3, minutes: 39},
     reviews: [
       {
         name: `Kate Muir`,
@@ -645,7 +645,7 @@ const filmsList = [
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
     videoSrc: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
-    runTime: { hours: 3, minutes: 39 },
+    runTime: {hours: 3, minutes: 39},
     reviews: [
       {
         name: `Kate Muir`,
