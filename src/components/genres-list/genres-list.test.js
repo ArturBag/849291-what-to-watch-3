@@ -1,8 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
 import {GenresList} from "./genres-list.jsx";
-import {Provider} from "react-redux";
-import configureStore from "redux-mock-store";
 
 const filmsList = [
   {
@@ -456,18 +454,17 @@ const filmsList = [
   }
 ];
 
-const store = configureStore([]);
 
 it(`Render GenresList`, () => {
 
   const tree = renderer
     .create(
-        <Provider store={store}>
-          <GenresList
-            moviesList={filmsList}
-            onMovieCardTitleClick={()=>{}}
-          />
-        </Provider>
+        <GenresList
+          moviesList={filmsList}
+          onMovieCardTitleClick={()=>{}}
+          activeGenre={`All genres`}
+          onGenreTypeClick={()=>{}}
+        />
     )
     .toJSON();
 

@@ -145,345 +145,481 @@ Array [
     <section
       className="catalog"
     >
-      <h2
-        className="catalog__title visually-hidden"
-      >
-        Catalog
-      </h2>
-      <ul
-        className="catalog__genres-list"
-      >
-        <li
-          className="catalog__genres-item catalog__genres-item--active"
-        >
-          <a
-            className="catalog__genres-link"
-            href="#"
-          >
-            All genres
-          </a>
-        </li>
-        <li
-          className="catalog__genres-item"
-        >
-          <a
-            className="catalog__genres-link"
-            href="#"
-          >
-            Comedies
-          </a>
-        </li>
-        <li
-          className="catalog__genres-item"
-        >
-          <a
-            className="catalog__genres-link"
-            href="#"
-          >
-            Crime
-          </a>
-        </li>
-        <li
-          className="catalog__genres-item"
-        >
-          <a
-            className="catalog__genres-link"
-            href="#"
-          >
-            Documentary
-          </a>
-        </li>
-        <li
-          className="catalog__genres-item"
-        >
-          <a
-            className="catalog__genres-link"
-            href="#"
-          >
-            Dramas
-          </a>
-        </li>
-        <li
-          className="catalog__genres-item"
-        >
-          <a
-            className="catalog__genres-link"
-            href="#"
-          >
-            Horror
-          </a>
-        </li>
-        <li
-          className="catalog__genres-item"
-        >
-          <a
-            className="catalog__genres-link"
-            href="#"
-          >
-            Kids & Family
-          </a>
-        </li>
-        <li
-          className="catalog__genres-item"
-        >
-          <a
-            className="catalog__genres-link"
-            href="#"
-          >
-            Romance
-          </a>
-        </li>
-        <li
-          className="catalog__genres-item"
-        >
-          <a
-            className="catalog__genres-link"
-            href="#"
-          >
-            Sci-Fi
-          </a>
-        </li>
-        <li
-          className="catalog__genres-item"
-        >
-          <a
-            className="catalog__genres-link"
-            href="#"
-          >
-            Thrillers
-          </a>
-        </li>
-      </ul>
-      <div
-        className="catalog__movies-list"
-      >
-        <article
-          className="small-movie-card catalog__movies-card"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Breaking Bad"
-              height={175}
-              src="../../markup/img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
-              width={280}
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-              onClick={[Function]}
-            >
-              Breaking Bad
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Pirates"
-              height={175}
-              src="../../markup/img/bohemian-rhapsody.jpg"
-              width={280}
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-              onClick={[Function]}
-            >
-              Pirates
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Misfits"
-              height={175}
-              src="../../markup/img/macbeth.jpg"
-              width={280}
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-              onClick={[Function]}
-            >
-              Misfits
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Terminal"
-              height={175}
-              src="../../markup/img/aviator.jpg"
-              width={280}
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-              onClick={[Function]}
-            >
-              Terminal
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Star Wars"
-              height={175}
-              src="../../markup/img/we-need-to-talk-about-kevin.jpg"
-              width={280}
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-              onClick={[Function]}
-            >
-              Star Wars
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Forsage"
-              height={175}
-              src="../../markup/img/what-we-do-in-the-shadows.jpg"
-              width={280}
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-              onClick={[Function]}
-            >
-              Forsage
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Goal"
-              height={175}
-              src="../../markup/img/orlando.jpg"
-              width={280}
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-              onClick={[Function]}
-            >
-              Goal
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="New Yorker"
-              height={175}
-              src="../../markup/img/war-of-the-worlds.jpg"
-              width={280}
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-              onClick={[Function]}
-            >
-              New Yorker
-            </a>
-          </h3>
-        </article>
-      </div>
-      <div
-        className="catalog__more"
-      >
-        <button
-          className="catalog__button"
-          type="button"
-        >
-          Show more
-        </button>
-      </div>
+      <GenresList
+        moviesList={
+          Array [
+            Object {
+              "background": "img/bg-the-grand-budapest-hotel.jpg",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Nunc blandit bibendum elit. Donec libero mauris, luctus sit amet rhoncus ac,
+    ultrices ut elit.",
+              "director": "Bernard Harding",
+              "genre": "Thriller",
+              "issuedDate": 2000,
+              "poster": "img/the-grand-budapest-hotel-poster.jpg",
+              "preview": "../../markup/img/fantastic-beasts-the-crimes-of-grindelwald.jpg",
+              "rating": 8.9,
+              "ratingCount": 59,
+              "reviews": Array [
+                Object {
+                  "date": "December 24, 2016",
+                  "name": "Kate Muir",
+                  "reviewText": "Discerning travellers and Wes Anderson fans will luxuriate in the glorious
+        Mittel-European kitsch of one of the director's funniest and most exquisitely designed movies in years.",
+                  "score": 2.9,
+                },
+                Object {
+                  "date": "November 18, 2015",
+                  "name": "Bill Goodykoontz",
+                  "reviewText": "Anderson's films are too precious for some, but for those of us willing to lose ourselves in them, they're a delight.
+        \\"The Grand Budapest Hotel\\" is no different, except that he has added a hint of gravitas to the mix, improving the recipe.",
+                  "score": 8.2,
+                },
+                Object {
+                  "date": "November 18, 2015",
+                  "name": "Amanda Greever",
+                  "reviewText": "I didn't find it amusing, and while I can appreciate the creativity, it's an hour and 40 minutes I wish I could take back.",
+                  "score": 8.4,
+                },
+                Object {
+                  "date": "December 20, 2016",
+                  "name": "Matthew Lickona",
+                  "reviewText": "The mannered, madcap proceedings are often delightful, occasionally silly, and here and there, gruesome and/or heartbreaking.",
+                  "score": 6.2,
+                },
+                Object {
+                  "date": "December 20, 2016",
+                  "name": "Paula Fleri-Soler",
+                  "reviewText": "It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.",
+                  "score": 6.6,
+                },
+                Object {
+                  "date": "December 20, 2016",
+                  "name": "Paula Fleri-Soler",
+                  "reviewText": "It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.",
+                  "score": 6,
+                },
+              ],
+              "runTime": Object {
+                "hours": 1,
+                "minutes": 22,
+              },
+              "starring": Array [
+                "Bill Murray, Edward Norton, Jude Law, Willem Dafoe and other",
+              ],
+              "title": "Breaking Bad",
+              "videoSrc": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
+            },
+            Object {
+              "background": "img/bg-the-grand-budapest-hotel.jpg",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Nunc blandit bibendum elit. Donec libero mauris, luctus sit amet rhoncus ac,
+    ultrices ut elit.",
+              "director": "Will Brooks",
+              "genre": "Drama",
+              "issuedDate": 1999,
+              "poster": "img/the-grand-budapest-hotel-poster.jpg",
+              "preview": "../../markup/img/bohemian-rhapsody.jpg",
+              "rating": 4.5,
+              "ratingCount": 11,
+              "reviews": Array [
+                Object {
+                  "date": "December 24, 2016",
+                  "name": "Kate Muir",
+                  "reviewText": "Discerning travellers and Wes Anderson fans will luxuriate in the glorious
+        Mittel-European kitsch of one of the director's funniest and most exquisitely designed movies in years.",
+                  "score": 2.9,
+                },
+                Object {
+                  "date": "November 18, 2015",
+                  "name": "Bill Goodykoontz",
+                  "reviewText": "Anderson's films are too precious for some, but for those of us willing to lose ourselves in them, they're a delight.
+        \\"The Grand Budapest Hotel\\" is no different, except that he has added a hint of gravitas to the mix, improving the recipe.",
+                  "score": 8.2,
+                },
+                Object {
+                  "date": "November 18, 2015",
+                  "name": "Amanda Greever",
+                  "reviewText": "I didn't find it amusing, and while I can appreciate the creativity, it's an hour and 40 minutes I wish I could take back.",
+                  "score": 8.4,
+                },
+                Object {
+                  "date": "December 20, 2016",
+                  "name": "Matthew Lickona",
+                  "reviewText": "The mannered, madcap proceedings are often delightful, occasionally silly, and here and there, gruesome and/or heartbreaking.",
+                  "score": 6.2,
+                },
+                Object {
+                  "date": "December 20, 2016",
+                  "name": "Paula Fleri-Soler",
+                  "reviewText": "It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.",
+                  "score": 6.6,
+                },
+                Object {
+                  "date": "December 20, 2016",
+                  "name": "Paula Fleri-Soler",
+                  "reviewText": "It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.",
+                  "score": 6,
+                },
+              ],
+              "starring": Array [
+                "Kymani Burgess, Jaylin Cherry, Jacey Oliver, Conrad Wolf and other",
+              ],
+              "title": "Pirates",
+              "videoSrc": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
+            },
+            Object {
+              "background": "img/bg-the-grand-budapest-hotel.jpg",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Nunc blandit bibendum elit. Donec libero mauris, luctus sit amet rhoncus ac,
+    ultrices ut elit.",
+              "director": "Titus Sparks",
+              "genre": "Drama",
+              "issuedDate": 1998,
+              "poster": "img/the-grand-budapest-hotel-poster.jpg",
+              "preview": "../../markup/img/macbeth.jpg",
+              "rating": 6.7,
+              "ratingCount": 24,
+              "reviews": Array [
+                Object {
+                  "date": "December 24, 2016",
+                  "name": "Kate Muir",
+                  "reviewText": "Discerning travellers and Wes Anderson fans will luxuriate in the glorious
+        Mittel-European kitsch of one of the director's funniest and most exquisitely designed movies in years.",
+                  "score": 2.9,
+                },
+                Object {
+                  "date": "November 18, 2015",
+                  "name": "Bill Goodykoontz",
+                  "reviewText": "Anderson's films are too precious for some, but for those of us willing to lose ourselves in them, they're a delight.
+        \\"The Grand Budapest Hotel\\" is no different, except that he has added a hint of gravitas to the mix, improving the recipe.",
+                  "score": 8.2,
+                },
+                Object {
+                  "date": "November 18, 2015",
+                  "name": "Amanda Greever",
+                  "reviewText": "I didn't find it amusing, and while I can appreciate the creativity, it's an hour and 40 minutes I wish I could take back.",
+                  "score": 8.4,
+                },
+                Object {
+                  "date": "December 20, 2016",
+                  "name": "Matthew Lickona",
+                  "reviewText": "The mannered, madcap proceedings are often delightful, occasionally silly, and here and there, gruesome and/or heartbreaking.",
+                  "score": 6.2,
+                },
+                Object {
+                  "date": "December 20, 2016",
+                  "name": "Paula Fleri-Soler",
+                  "reviewText": "It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.",
+                  "score": 6.6,
+                },
+                Object {
+                  "date": "December 20, 2016",
+                  "name": "Paula Fleri-Soler",
+                  "reviewText": "It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.",
+                  "score": 6,
+                },
+              ],
+              "starring": Array [
+                "Giovanny Mccullough, Leah Delacruz, Davon Terrell, Romeo Carr and other",
+              ],
+              "title": "Misfits",
+              "videoSrc": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
+            },
+            Object {
+              "background": "img/bg-the-grand-budapest-hotel.jpg",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Nunc blandit bibendum elit. Donec libero mauris, luctus sit amet rhoncus ac,
+    ultrices ut elit.",
+              "director": "Jeramiah Goldeng",
+              "genre": "Horror",
+              "issuedDate": 1992,
+              "poster": "img/the-grand-budapest-hotel-poster.jpg",
+              "preview": "../../markup/img/aviator.jpg",
+              "rating": 6.9,
+              "ratingCount": 555,
+              "reviews": Array [
+                Object {
+                  "date": "December 24, 2016",
+                  "name": "Kate Muir",
+                  "reviewText": "Discerning travellers and Wes Anderson fans will luxuriate in the glorious
+        Mittel-European kitsch of one of the director's funniest and most exquisitely designed movies in years.",
+                  "score": 2.9,
+                },
+                Object {
+                  "date": "November 18, 2015",
+                  "name": "Bill Goodykoontz",
+                  "reviewText": "Anderson's films are too precious for some, but for those of us willing to lose ourselves in them, they're a delight.
+        \\"The Grand Budapest Hotel\\" is no different, except that he has added a hint of gravitas to the mix, improving the recipe.",
+                  "score": 8.2,
+                },
+                Object {
+                  "date": "November 18, 2015",
+                  "name": "Amanda Greever",
+                  "reviewText": "I didn't find it amusing, and while I can appreciate the creativity, it's an hour and 40 minutes I wish I could take back.",
+                  "score": 8.4,
+                },
+                Object {
+                  "date": "December 20, 2016",
+                  "name": "Matthew Lickona",
+                  "reviewText": "The mannered, madcap proceedings are often delightful, occasionally silly, and here and there, gruesome and/or heartbreaking.",
+                  "score": 6.2,
+                },
+                Object {
+                  "date": "December 20, 2016",
+                  "name": "Paula Fleri-Soler",
+                  "reviewText": "It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.",
+                  "score": 6.6,
+                },
+                Object {
+                  "date": "December 20, 2016",
+                  "name": "Paula Fleri-Soler",
+                  "reviewText": "It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.",
+                  "score": 6,
+                },
+              ],
+              "starring": Array [
+                "Nasir Castaneda, Ariel Brooks, Lucia Compton and other",
+              ],
+              "title": "Terminal",
+              "videoSrc": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
+            },
+            Object {
+              "background": "img/bg-the-grand-budapest-hotel.jpg",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Nunc blandit bibendum elit. Donec libero mauris, luctus sit amet rhoncus ac,
+    ultrices ut elit.",
+              "director": "Roy Boyle",
+              "genre": "Documentary",
+              "issuedDate": 2002,
+              "poster": "img/the-grand-budapest-hotel-poster.jpg",
+              "preview": "../../markup/img/we-need-to-talk-about-kevin.jpg",
+              "rating": 8.3,
+              "ratingCount": 242,
+              "reviews": Array [
+                Object {
+                  "date": "December 24, 2016",
+                  "name": "Kate Muir",
+                  "reviewText": "Discerning travellers and Wes Anderson fans will luxuriate in the glorious
+        Mittel-European kitsch of one of the director's funniest and most exquisitely designed movies in years.",
+                  "score": 2.9,
+                },
+                Object {
+                  "date": "November 18, 2015",
+                  "name": "Bill Goodykoontz",
+                  "reviewText": "Anderson's films are too precious for some, but for those of us willing to lose ourselves in them, they're a delight.
+        \\"The Grand Budapest Hotel\\" is no different, except that he has added a hint of gravitas to the mix, improving the recipe.",
+                  "score": 8.2,
+                },
+                Object {
+                  "date": "November 18, 2015",
+                  "name": "Amanda Greever",
+                  "reviewText": "I didn't find it amusing, and while I can appreciate the creativity, it's an hour and 40 minutes I wish I could take back.",
+                  "score": 8.4,
+                },
+                Object {
+                  "date": "December 20, 2016",
+                  "name": "Matthew Lickona",
+                  "reviewText": "The mannered, madcap proceedings are often delightful, occasionally silly, and here and there, gruesome and/or heartbreaking.",
+                  "score": 6.2,
+                },
+                Object {
+                  "date": "December 20, 2016",
+                  "name": "Paula Fleri-Soler",
+                  "reviewText": "It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.",
+                  "score": 6.6,
+                },
+                Object {
+                  "date": "December 20, 2016",
+                  "name": "Paula Fleri-Soler",
+                  "reviewText": "It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.",
+                  "score": 6,
+                },
+              ],
+              "starring": Array [
+                "Molly Reyes, Edward Norton, Mareli Moore, Makenna Henderson and other",
+              ],
+              "title": "Star Wars",
+              "videoSrc": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
+            },
+            Object {
+              "background": "img/bg-the-grand-budapest-hotel.jpg",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Nunc blandit bibendum elit. Donec libero mauris, luctus sit amet rhoncus ac,
+    ultrices ut elit.",
+              "director": "Claire Hodge",
+              "genre": "Crime",
+              "issuedDate": 2001,
+              "poster": "img/the-grand-budapest-hotel-poster.jpg",
+              "preview": "../../markup/img/what-we-do-in-the-shadows.jpg",
+              "rating": 2.5,
+              "ratingCount": 243,
+              "reviews": Array [
+                Object {
+                  "date": "December 24, 2016",
+                  "name": "Kate Muir",
+                  "reviewText": "Discerning travellers and Wes Anderson fans will luxuriate in the glorious
+        Mittel-European kitsch of one of the director's funniest and most exquisitely designed movies in years.",
+                  "score": 2.9,
+                },
+                Object {
+                  "date": "November 18, 2015",
+                  "name": "Bill Goodykoontz",
+                  "reviewText": "Anderson's films are too precious for some, but for those of us willing to lose ourselves in them, they're a delight.
+        \\"The Grand Budapest Hotel\\" is no different, except that he has added a hint of gravitas to the mix, improving the recipe.",
+                  "score": 8.2,
+                },
+                Object {
+                  "date": "November 18, 2015",
+                  "name": "Amanda Greever",
+                  "reviewText": "I didn't find it amusing, and while I can appreciate the creativity, it's an hour and 40 minutes I wish I could take back.",
+                  "score": 8.4,
+                },
+                Object {
+                  "date": "December 20, 2016",
+                  "name": "Matthew Lickona",
+                  "reviewText": "The mannered, madcap proceedings are often delightful, occasionally silly, and here and there, gruesome and/or heartbreaking.",
+                  "score": 6.2,
+                },
+                Object {
+                  "date": "December 20, 2016",
+                  "name": "Paula Fleri-Soler",
+                  "reviewText": "It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.",
+                  "score": 6.6,
+                },
+                Object {
+                  "date": "December 20, 2016",
+                  "name": "Paula Fleri-Soler",
+                  "reviewText": "It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.",
+                  "score": 6,
+                },
+              ],
+              "starring": Array [
+                "Amaris Hess, Tobias Osborne, Samir Fitzpatrick, Baron Bolton and other",
+              ],
+              "title": "Forsage",
+              "videoSrc": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
+            },
+            Object {
+              "background": "img/bg-the-grand-budapest-hotel.jpg",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Nunc blandit bibendum elit. Donec libero mauris, luctus sit amet rhoncus ac,
+    ultrices ut elit.",
+              "director": "Brynlee Haney",
+              "genre": "Comedy",
+              "issuedDate": 2011,
+              "poster": "img/the-grand-budapest-hotel-poster.jpg",
+              "preview": "../../markup/img/orlando.jpg",
+              "rating": 3.4,
+              "ratingCount": 222,
+              "reviews": Array [
+                Object {
+                  "date": "December 24, 2016",
+                  "name": "Kate Muir",
+                  "reviewText": "Discerning travellers and Wes Anderson fans will luxuriate in the glorious
+        Mittel-European kitsch of one of the director's funniest and most exquisitely designed movies in years.",
+                  "score": 2.9,
+                },
+                Object {
+                  "date": "November 18, 2015",
+                  "name": "Bill Goodykoontz",
+                  "reviewText": "Anderson's films are too precious for some, but for those of us willing to lose ourselves in them, they're a delight.
+        \\"The Grand Budapest Hotel\\" is no different, except that he has added a hint of gravitas to the mix, improving the recipe.",
+                  "score": 8.2,
+                },
+                Object {
+                  "date": "November 18, 2015",
+                  "name": "Amanda Greever",
+                  "reviewText": "I didn't find it amusing, and while I can appreciate the creativity, it's an hour and 40 minutes I wish I could take back.",
+                  "score": 8.4,
+                },
+                Object {
+                  "date": "December 20, 2016",
+                  "name": "Matthew Lickona",
+                  "reviewText": "The mannered, madcap proceedings are often delightful, occasionally silly, and here and there, gruesome and/or heartbreaking.",
+                  "score": 6.2,
+                },
+                Object {
+                  "date": "December 20, 2016",
+                  "name": "Paula Fleri-Soler",
+                  "reviewText": "It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.",
+                  "score": 6.6,
+                },
+                Object {
+                  "date": "December 20, 2016",
+                  "name": "Paula Fleri-Soler",
+                  "reviewText": "It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.",
+                  "score": 6,
+                },
+              ],
+              "starring": Array [
+                "Piper Mccann, Seamus Ashley, Jude Law, Lila Waters and other",
+              ],
+              "title": "Goal",
+              "videoSrc": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
+            },
+            Object {
+              "background": "img/bg-the-grand-budapest-hotel.jpg",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Nunc blandit bibendum elit. Donec libero mauris, luctus sit amet rhoncus ac,
+    ultrices ut elit.",
+              "director": "Melany Short",
+              "genre": "History",
+              "issuedDate": 2010,
+              "poster": "img/the-grand-budapest-hotel-poster.jpg",
+              "preview": "../../markup/img/war-of-the-worlds.jpg",
+              "rating": 2.9,
+              "ratingCount": 442,
+              "reviews": Array [
+                Object {
+                  "date": "December 24, 2016",
+                  "name": "Kate Muir",
+                  "reviewText": "Discerning travellers and Wes Anderson fans will luxuriate in the glorious
+        Mittel-European kitsch of one of the director's funniest and most exquisitely designed movies in years.",
+                  "score": 2.9,
+                },
+                Object {
+                  "date": "November 18, 2015",
+                  "name": "Bill Goodykoontz",
+                  "reviewText": "Anderson's films are too precious for some, but for those of us willing to lose ourselves in them, they're a delight.
+        \\"The Grand Budapest Hotel\\" is no different, except that he has added a hint of gravitas to the mix, improving the recipe.",
+                  "score": 8.2,
+                },
+                Object {
+                  "date": "November 18, 2015",
+                  "name": "Amanda Greever",
+                  "reviewText": "I didn't find it amusing, and while I can appreciate the creativity, it's an hour and 40 minutes I wish I could take back.",
+                  "score": 8.4,
+                },
+                Object {
+                  "date": "December 20, 2016",
+                  "name": "Matthew Lickona",
+                  "reviewText": "The mannered, madcap proceedings are often delightful, occasionally silly, and here and there, gruesome and/or heartbreaking.",
+                  "score": 6.2,
+                },
+                Object {
+                  "date": "December 20, 2016",
+                  "name": "Paula Fleri-Soler",
+                  "reviewText": "It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.",
+                  "score": 6.6,
+                },
+                Object {
+                  "date": "December 20, 2016",
+                  "name": "Paula Fleri-Soler",
+                  "reviewText": "It is certainly a magical and childlike way of storytelling, even if the content is a little more adult.",
+                  "score": 6,
+                },
+              ],
+              "starring": Array [
+                "Franklin Sosa, Abby Beasley, Jovan Lang and other",
+              ],
+              "title": "New Yorker",
+              "videoSrc": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
+            },
+          ]
+        }
+        onMovieCardTitleClick={[Function]}
+      />
     </section>
     <footer
       className="page-footer"
