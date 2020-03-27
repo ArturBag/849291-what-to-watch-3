@@ -1,6 +1,10 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import App from "./app.jsx";
+import {Provider} from "react-redux";
+import configureStore from "redux-mock-store";
+import {App} from "./app.jsx";
+
+const mockStore = configureStore([]);
 
 const filmsList = [
   {
@@ -454,23 +458,56 @@ const filmsList = [
   }
 ];
 
-const MovieHeader = {
-  TITLE: filmsList[0].title,
-  GENRE: filmsList[0].genre,
-  ISSUED_DATE: filmsList[0].issuedDate
-};
 
-it(`Render App`, () => {
+describe(`Render App`, () => {
+  it(`Render Main`, () => {
+    const store = mockStore({
+      activeComponent: `Main`,
+      activeMovieDetailsIndex: 0,
+      activeGenre: `All genres`,
+      moviesList: filmsList,
+    });
 
-  const tree = renderer
-    .create(<App
-      title={MovieHeader.TITLE}
-      genre={MovieHeader.GENRE}
-      issuedDate={MovieHeader.ISSUED_DATE}
-      moviesList={filmsList}
-    />)
-    .toJSON();
+    const tree = renderer
+      .create(
+          <Provider store={store}>
+            <App
+              activeComponent={`Main`}
+              activeMovieDetailsIndex={0}
+              moviesList={filmsList}
+              onMovieCardTitleClick={()=>{}}
+            />
+          </Provider>
+      )
+      .toJSON();
 
-  expect(tree).toMatchSnapshot();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it(`Render MovieDetails`, () => {
+    const store = mockStore({
+      activeComponent: `MovieDetails`,
+      activeMovieDetailsIndex: 0,
+      moviesList: filmsList,
+    });
+
+    const tree = renderer
+      .create(
+          <Provider store={store}>
+            <App
+              activeComponent={`MovieDetails`}
+              activeMovieDetailsIndex={1}
+              moviesList={filmsList}
+              onMovieCardTitleClick={()=>{}}
+            />
+          </Provider>, {
+            createNodeMock: () => {
+              return {};
+            }
+          })
+      .toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
 
 });

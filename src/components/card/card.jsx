@@ -17,7 +17,7 @@ class Card extends PureComponent {
 
   render() {
 
-    const {title, preview, onMovieCardTitleClick, videoSrc, id} = this.props;
+    const {title, preview, onMovieCardTitleClick, videoSrc, id, moviesList} = this.props;
 
     const {activePlayerId, isCardMouseOvered} = this.state;
 
@@ -56,7 +56,7 @@ class Card extends PureComponent {
         <h3 className="small-movie-card__title">
           <a
             onClick={(evt) => {
-              onMovieCardTitleClick(evt, title);
+              onMovieCardTitleClick(evt, title, moviesList);
             }}
             className="small-movie-card__link" href="movie-page.html"
           >
@@ -76,6 +76,7 @@ Card.propTypes = {
   onMovieCardTitleClick: PropTypes.func.isRequired,
   videoSrc: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
+  moviesList: PropTypes.array.isRequired
 };
 
 

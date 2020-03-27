@@ -1,3 +1,5 @@
+import {reducer, ActionType} from "./reducer.js";
+
 const filmsList = [
   {
     title: `Fantastic Beasts: The Crimes of Grindelwald`,
@@ -687,4 +689,83 @@ const filmsList = [
   }
 ];
 
-export default filmsList;
+
+it(`Reducer without additional parameters should return initial state`, () => {
+  expect(reducer(void 0, {})).toEqual({
+    activeComponent: `Main`,
+    activeMovieDetailsIndex: 0,
+    activeGenre: `All genres`,
+    moviesList: filmsList,
+  });
+});
+
+it(`Reducer should increment current activeMovieDetailsIndex by a given value
+and switch activeComponent to MovieDetails`, () => {
+  expect(reducer({
+    activeComponent: `Main`,
+    activeMovieDetailsIndex: 0,
+    activeGenre: `All genres`,
+    moviesList: filmsList,
+  }, {
+    type: ActionType.ON_MOVIE_CARD_TITLE_CLICK,
+    activeComponent: `MovieDetails`,
+    activeMovieDetailsIndex: 1,
+  })).toEqual({
+    activeComponent: `MovieDetails`,
+    activeMovieDetailsIndex: 1,
+    activeGenre: `All genres`,
+    moviesList: filmsList,
+  });
+
+  expect(reducer({
+    activeComponent: `Main`,
+    activeMovieDetailsIndex: 0,
+    activeGenre: `All genres`,
+    moviesList: filmsList,
+  }, {
+    type: ActionType.ON_MOVIE_CARD_TITLE_CLICK,
+    activeComponent: `Main`,
+    activeMovieDetailsIndex: 0,
+  })).toEqual({
+    activeComponent: `Main`,
+    activeMovieDetailsIndex: 0,
+    activeGenre: `All genres`,
+    moviesList: filmsList,
+  });
+});
+
+it(`Reducer should return filtered filmsList by a chosen filter
+and switch activeGenre to chosen genre`, () => {
+  expect(reducer({
+    activeComponent: `Main`,
+    activeMovieDetailsIndex: 0,
+    activeGenre: `All genres`,
+    moviesList: filmsList,
+  }, {
+    type: ActionType.ON_GENRE_TYPE_CLICK,
+    activeGenre: `Comedy`,
+    moviesList: filmsList
+  })).toEqual({
+    activeComponent: `Main`,
+    activeMovieDetailsIndex: 0,
+    activeGenre: `Comedy`,
+    moviesList: filmsList,
+  });
+
+  expect(reducer({
+    activeComponent: `Main`,
+    activeMovieDetailsIndex: 0,
+    activeGenre: `All genres`,
+    moviesList: filmsList,
+  }, {
+    type: ActionType.ON_GENRE_TYPE_CLICK,
+    activeGenre: `All genres`,
+    moviesList: filmsList
+  })).toEqual({
+    activeComponent: `Main`,
+    activeMovieDetailsIndex: 0,
+    activeGenre: `All genres`,
+    moviesList: filmsList,
+  });
+});
+

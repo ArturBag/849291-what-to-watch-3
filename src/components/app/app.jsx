@@ -1,55 +1,44 @@
 import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
 import {Switch, Route, BrowserRouter} from "react-router-dom";
+import {connect} from "react-redux";
 import filmsList from "../../mocks/films.js";
+import {ActionCreator} from "../../reducer.js";
 import Main from "../main/main.jsx";
 import MovieDetails from "../movie-details/movie-details.jsx";
 
 class App extends PureComponent {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      activeComponent: `Main`,
-      activeMovieDetailsIndex: 0,
-    };
-
-  }
 
   _renderApp() {
 
-    const movieCardTitleHandler = (evt, title) => {
-      evt.preventDefault();
+    const {activeComponent, activeMovieDetailsIndex,
+      moviesList, onMovieCardTitleClick} = this.props;
 
-      const chosedTitle = title;
-      const indexOfChoosedMovie = filmsList.findIndex((it) => it.title === chosedTitle);
-
-      this.setState({
-        activeComponent: `MovieDetails`,
-        activeMovieDetailsIndex: indexOfChoosedMovie
-      });
+    const MovieHeader = {
+      TITLE: filmsList[0].title,
+      GENRE: filmsList[0].genre,
+      ISSUED_DATE: filmsList[0].issuedDate
     };
 
-    const {title, genre, issuedDate, moviesList} = this.props;
-    const {activeComponent} = this.state;
-    const movieDetailsData = moviesList[this.state.activeMovieDetailsIndex];
+    const movieDetailsData = moviesList[activeMovieDetailsIndex];
 
 
     if (activeComponent === `Main`) {
       return (
         <Main
-          title={title}
-          genre={genre}
-          issuedDate={issuedDate}
-          moviesList={moviesList}
-          onMovieCardTitleClick={movieCardTitleHandler}
+          title={MovieHeader.TITLE}
+          genre={MovieHeader.GENRE}
+          issuedDate={MovieHeader.ISSUED_DATE}
+          moviesList={moviesList.slice(0, 9)}
+          onMovieCardTitleClick={onMovieCardTitleClick}
         />
       );
     } else if (activeComponent === `MovieDetails`) {
       return (
         <MovieDetails
           movieDetailsData={movieDetailsData}
-          onMovieCardTitleClick={movieCardTitleHandler}
+          moviesList={moviesList}
+          onMovieCardTitleClick={onMovieCardTitleClick}
         />
       );
     }
@@ -59,21 +48,9 @@ class App extends PureComponent {
   }
 
   render() {
+    const {moviesList, activeMovieDetailsIndex, onMovieCardTitleClick} = this.props;
 
-    const movieCardTitleHandler = (evt, title) => {
-      evt.preventDefault();
-
-      const chosedTitle = title;
-      const indexOfChoosedMovie = filmsList.findIndex((it) => it.title === chosedTitle);
-
-      this.setState({
-        activeComponent: `MovieDetails`,
-        activeMovieDetailsIndex: indexOfChoosedMovie
-      });
-    };
-
-    const {moviesList} = this.props;
-    const movieDetailsData = moviesList[this.state.activeMovieDetailsIndex];
+    const movieDetailsData = moviesList[activeMovieDetailsIndex];
 
     return (
       <BrowserRouter>
@@ -84,7 +61,8 @@ class App extends PureComponent {
           <Route exact path="/dev-film">
             <MovieDetails
               movieDetailsData={movieDetailsData}
-              onMovieCardTitleClick={movieCardTitleHandler}
+              moviesList={moviesList}
+              onMovieCardTitleClick={onMovieCardTitleClick}
             />
           </Route>
         </Switch>
@@ -94,10 +72,26 @@ class App extends PureComponent {
 }
 
 App.propTypes = {
-  title: PropTypes.PropTypes.string.isRequired,
-  genre: PropTypes.PropTypes.string.isRequired,
-  issuedDate: PropTypes.number.isRequired,
-  moviesList: PropTypes.array.isRequired
+  moviesList: PropTypes.array.isRequired,
+  activeMovieDetailsIndex: PropTypes.number.isRequired,
+  onMovieCardTitleClick: PropTypes.func.isRequired,
+  activeComponent: PropTypes.string.isRequired
 };
 
-export default App;
+const mapStateToProps = (state) => ({
+  activeComponent: state.activeComponent,
+  activeMovieDetailsIndex: state.activeMovieDetailsIndex,
+  moviesList: state.moviesList
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  onMovieCardTitleClick(evt, title, moviesList) {
+    dispatch(ActionCreator.onMovieCardTitleClick(evt, title, moviesList));
+  }
+
+});
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
+
+export {App};

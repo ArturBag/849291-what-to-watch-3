@@ -459,6 +459,7 @@ const MovieHeader = {
   GENRE: filmsList[0].genre,
   ISSUED_DATE: filmsList[0].issuedDate
 };
+jest.mock(`../genres-list/genres-list`, () => `GenresList`);
 
 it(`Render Main`, () => {
 
