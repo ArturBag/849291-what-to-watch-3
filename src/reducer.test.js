@@ -696,6 +696,7 @@ it(`Reducer without additional parameters should return initial state`, () => {
     activeMovieDetailsIndex: 0,
     activeGenre: `All genres`,
     moviesList: filmsList,
+    moviesQtyToShow: 8
   });
 });
 
@@ -706,6 +707,7 @@ and switch activeComponent to MovieDetails`, () => {
     activeMovieDetailsIndex: 0,
     activeGenre: `All genres`,
     moviesList: filmsList,
+    moviesQtyToShow: 8
   }, {
     type: ActionType.ON_MOVIE_CARD_TITLE_CLICK,
     activeComponent: `MovieDetails`,
@@ -715,6 +717,7 @@ and switch activeComponent to MovieDetails`, () => {
     activeMovieDetailsIndex: 1,
     activeGenre: `All genres`,
     moviesList: filmsList,
+    moviesQtyToShow: 8
   });
 
   expect(reducer({
@@ -722,6 +725,7 @@ and switch activeComponent to MovieDetails`, () => {
     activeMovieDetailsIndex: 0,
     activeGenre: `All genres`,
     moviesList: filmsList,
+    moviesQtyToShow: 8
   }, {
     type: ActionType.ON_MOVIE_CARD_TITLE_CLICK,
     activeComponent: `Main`,
@@ -731,6 +735,7 @@ and switch activeComponent to MovieDetails`, () => {
     activeMovieDetailsIndex: 0,
     activeGenre: `All genres`,
     moviesList: filmsList,
+    moviesQtyToShow: 8
   });
 });
 
@@ -741,6 +746,7 @@ and switch activeGenre to chosen genre`, () => {
     activeMovieDetailsIndex: 0,
     activeGenre: `All genres`,
     moviesList: filmsList,
+    moviesQtyToShow: 8
   }, {
     type: ActionType.ON_GENRE_TYPE_CLICK,
     activeGenre: `Comedy`,
@@ -750,6 +756,7 @@ and switch activeGenre to chosen genre`, () => {
     activeMovieDetailsIndex: 0,
     activeGenre: `Comedy`,
     moviesList: filmsList,
+    moviesQtyToShow: 8
   });
 
   expect(reducer({
@@ -757,6 +764,7 @@ and switch activeGenre to chosen genre`, () => {
     activeMovieDetailsIndex: 0,
     activeGenre: `All genres`,
     moviesList: filmsList,
+    moviesQtyToShow: 8
   }, {
     type: ActionType.ON_GENRE_TYPE_CLICK,
     activeGenre: `All genres`,
@@ -766,6 +774,28 @@ and switch activeGenre to chosen genre`, () => {
     activeMovieDetailsIndex: 0,
     activeGenre: `All genres`,
     moviesList: filmsList,
+    moviesQtyToShow: 8
   });
+});
+
+it(`Reducer should add movies quantity to already displayed movies by clicking on show more button
+and adding added movies quantity to  moviesQtyToShow state `, () => {
+  expect(reducer({
+    activeComponent: `Main`,
+    activeMovieDetailsIndex: 0,
+    activeGenre: `All genres`,
+    moviesList: filmsList,
+    moviesQtyToShow: 8
+  }, {
+    type: ActionType.ON_SHOW_MORE_BUTTON_CLICK,
+    moviesQtyToShow: 16
+  })).toEqual({
+    activeComponent: `Main`,
+    activeMovieDetailsIndex: 0,
+    activeGenre: `All genres`,
+    moviesList: filmsList,
+    moviesQtyToShow: 16
+  });
+
 });
 

@@ -1,6 +1,8 @@
 import {extend} from "./utils.js";
 import filmsList from "./mocks/films.js";
 
+const MOVIES_LIMIT_TO_DISPLAY = 8;
+let moviesQty = 8;
 const uniqueGenresList = [];
 const uniqueMovies = [];
 filmsList.forEach((it) => {
@@ -24,11 +26,13 @@ const initialState = {
   activeMovieDetailsIndex: 0,
   activeGenre: `All genres`,
   moviesList: filmsList,
+  moviesQtyToShow: MOVIES_LIMIT_TO_DISPLAY,
 };
 
 const ActionType = {
   ON_MOVIE_CARD_TITLE_CLICK: `ON_MOVIE_CARD_TITLE_CLICK`,
-  ON_GENRE_TYPE_CLICK: `ON_GENRE_TYPE_CLICK`
+  ON_GENRE_TYPE_CLICK: `ON_GENRE_TYPE_CLICK`,
+  ON_SHOW_MORE_BUTTON_CLICK: `ON_SHOW_MORE_BUTTON_CLICK`
 };
 
 
@@ -80,6 +84,16 @@ const ActionCreator = {
       activeGenre: genre,
       moviesList: filteredMovies
     };
+  },
+
+  onShowMoreButtonClick: ()=> {
+
+    moviesQty += MOVIES_LIMIT_TO_DISPLAY;
+
+    return {
+      type: ActionType.ON_SHOW_MORE_BUTTON_CLICK,
+      moviesQtyToShow: moviesQty
+    };
   }
 };
 
@@ -98,6 +112,11 @@ const reducer = (state = initialState, action) => {
       return extend(state, {
         activeGenre: action.activeGenre,
         moviesList: action.moviesList
+      });
+
+    case ActionType.ON_SHOW_MORE_BUTTON_CLICK:
+      return extend(state, {
+        moviesQtyToShow: action.moviesQtyToShow
       });
 
 

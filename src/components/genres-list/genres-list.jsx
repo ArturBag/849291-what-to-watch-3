@@ -1,14 +1,35 @@
 import React from "react";
 import MoviesList from "../movies-list/movies-list.jsx";
+import {ShowMore} from "../show-more/show-more.jsx";
 import PropTypes from "prop-types";
 import {connect} from "react-redux";
 import {ActionCreator} from "../../reducer.js";
 import {genresListItems} from "../../const.js";
 
+const MOVIES_LIMIT_TO_DISPLAY = 8;
 
 const GenresList = (props) => {
 
-  const {moviesList, activeGenre, onMovieCardTitleClick, onGenreTypeClick} = props;
+  const {activeGenre, onMovieCardTitleClick, onGenreTypeClick, onShowMoreButtonClick} = props;
+  let {moviesList, moviesQtyToShow} = props;
+
+  let moviesDataLenght = moviesList.length;
+  let isShowMoreComponentDisplayed = true;
+
+  if (moviesDataLenght < MOVIES_LIMIT_TO_DISPLAY) {
+
+    moviesQtyToShow = moviesDataLenght;
+    isShowMoreComponentDisplayed = false;
+
+  } else if (moviesQtyToShow >= moviesDataLenght) {
+
+    moviesQtyToShow = moviesDataLenght;
+    isShowMoreComponentDisplayed = false;
+  }
+
+
+  moviesList = moviesList.slice(0, moviesQtyToShow);
+
 
   const genresListData = genresListItems.map((genre, index) => {
 
@@ -42,9 +63,12 @@ const GenresList = (props) => {
         />}
       </div>
       <div className="catalog__more">
-        <button className="catalog__button" type="button">
-          Show more
-        </button>
+        {isShowMoreComponentDisplayed ?
+          <ShowMore
+            onShowMoreButtonClick={onShowMoreButtonClick}
+          />
+          : ``
+        }
       </div>
     </React.Fragment>
   );
@@ -56,16 +80,22 @@ GenresList.propTypes = {
   moviesList: PropTypes.array.isRequired,
   onMovieCardTitleClick: PropTypes.func.isRequired,
   onGenreTypeClick: PropTypes.func.isRequired,
+  moviesQtyToShow: PropTypes.number.isRequired,
+  onShowMoreButtonClick: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
   activeGenre: state.activeGenre,
+  moviesQtyToShow: state.moviesQtyToShow,
 });
 
 const mapDispatchToProps = (dispatch) => ({
   onGenreTypeClick(genre) {
     dispatch(ActionCreator.onGenreTypeClick(genre));
-  }
+  },
+  onShowMoreButtonClick() {
+    dispatch(ActionCreator.onShowMoreButtonClick());
+  },
 });
 
 export {GenresList};

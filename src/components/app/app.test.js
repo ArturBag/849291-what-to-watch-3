@@ -466,6 +466,7 @@ describe(`Render App`, () => {
       activeMovieDetailsIndex: 0,
       activeGenre: `All genres`,
       moviesList: filmsList,
+      moviesQtyToShow: 8
     });
 
     const tree = renderer

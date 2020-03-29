@@ -29,7 +29,7 @@ class App extends PureComponent {
           title={MovieHeader.TITLE}
           genre={MovieHeader.GENRE}
           issuedDate={MovieHeader.ISSUED_DATE}
-          moviesList={moviesList.slice(0, 9)}
+          moviesList={moviesList}
           onMovieCardTitleClick={onMovieCardTitleClick}
         />
       );
