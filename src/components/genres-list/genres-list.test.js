@@ -464,6 +464,8 @@ it(`Render GenresList`, () => {
           onMovieCardTitleClick={()=>{}}
           activeGenre={`All genres`}
           onGenreTypeClick={()=>{}}
+          moviesQtyToShow={8}
+          onShowMoreButtonClick={()=>{}}
         />
     )
     .toJSON();
