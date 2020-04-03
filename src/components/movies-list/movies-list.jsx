@@ -1,6 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Card from "../card/card.jsx";
+import CardComponent from "../card/card.jsx";
+import withCard from "../../hocs/with-card/with-card.jsx";
+
+const Card = withCard(CardComponent);
 
 const MoviesList = (props) => {
   const {moviesList, onMovieCardTitleClick} = props;

@@ -1,39 +1,21 @@
 import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
-import VideoPlayer from "../video-player/video-player.jsx";
+import Player from "../video-player/video-player.jsx";
+import withVideo from "../../hocs/with-video/with-video.jsx";
+
+const VideoPlayer = withVideo(Player);
 
 class Card extends PureComponent {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      isCardMouseOvered: false,
-      activePlayerId: -1,
-
-    };
-
-  }
-
 
   render() {
 
-    const {title, preview, onMovieCardTitleClick, videoSrc, id, moviesList} = this.props;
-
-    const {activePlayerId, isCardMouseOvered} = this.state;
+    const {title, preview, videoSrc, id, moviesList, onMovieCardTitleClick,
+      onMouseEnter, onMouseLeave, activePlayerId, isCardMouseOvered} = this.props;
 
     return (
       <article className="small-movie-card catalog__movies-card"
-        onMouseEnter={() => {
-          this.setState({
-            activePlayerId: activePlayerId === id ? -1 : id,
-            isCardMouseOvered: true
-          });
-        }}
-        onMouseLeave={() => {
-          this.setState({
-            isCardMouseOvered: false,
-            activePlayerId: -1});
-        }}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
       >
         <div className="small-movie-card__image">
           {isCardMouseOvered ?
@@ -76,7 +58,11 @@ Card.propTypes = {
   onMovieCardTitleClick: PropTypes.func.isRequired,
   videoSrc: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
-  moviesList: PropTypes.array.isRequired
+  moviesList: PropTypes.array.isRequired,
+  onMouseEnter: PropTypes.func.isRequired,
+  onMouseLeave: PropTypes.func.isRequired,
+  activePlayerId: PropTypes.number.isRequired,
+  isCardMouseOvered: PropTypes.bool.isRequired
 };
 
 

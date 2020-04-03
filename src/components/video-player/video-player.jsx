@@ -1,63 +1,21 @@
-import React, {PureComponent, Fragment, createRef} from "react";
+import React, {PureComponent, Fragment} from "react";
 import PropTypes from "prop-types";
 
 export default class VideoPlayer extends PureComponent {
-  constructor(props) {
-    super(props);
-
-    this._videoRef = createRef();
-
-    this.state = {
-      isLoading: true,
-      isPlaying: props.isPlaying,
-      isMuted: true
-    };
-
-  }
-
-  componentDidMount() {
-    const {videoSrc} = this.props;
-    const video = this._videoRef.current;
-
-    video.src = videoSrc;
-
-    video.oncanplaythrough = () => this.setState({
-      isLoading: false,
-    });
-
-    video.onplay = () => {
-      this.setState({
-        isPlaying: true,
-      });
-    };
-
-    video.muted = true;
-
-  }
-
-  componentWillUnmount() {
-    const video = this._videoRef.current;
-
-    video.oncanplaythrough = null;
-    video.onplay = null;
-    video.src = ``;
-    video.muted = ``;
-
-  }
 
   render() {
-    const {previewMode} = this.props;
+    const {previewMode, children} = this.props;
 
     return (
 
       <div className="player">
         {previewMode === true ?
           <Fragment>
-            <video src="#" className="player__video" poster="img/player-poster.jpg" ref={this._videoRef} />
+            {children}
           </Fragment>
           :
           <Fragment>
-            <video src="#" className="player__video" poster="img/player-poster.jpg" ref={this._videoRef} />
+            {children}
             <button type="button" className="player__exit">
               Exit
             </button>
@@ -93,17 +51,12 @@ export default class VideoPlayer extends PureComponent {
     );
   }
 
-  componentDidUpdate() {
-
-    const video = this._videoRef.current;
-    video.play();
-
-  }
-
 }
 
 VideoPlayer.propTypes = {
-  isPlaying: PropTypes.bool.isRequired,
-  videoSrc: PropTypes.string.isRequired,
   previewMode: PropTypes.bool.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]).isRequired,
 };
