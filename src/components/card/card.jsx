@@ -10,11 +10,15 @@ class Card extends PureComponent {
   render() {
 
     const {title, preview, videoSrc, id, moviesList, onMovieCardTitleClick,
-      onMouseEnter, onMouseLeave, activePlayerId, isCardMouseOvered} = this.props;
+      onMouseEnter, onMouseLeave, activePlayerId, isCardMouseOvered,
+      getActiveItem} = this.props;
 
     return (
       <article className="small-movie-card catalog__movies-card"
-        onMouseEnter={onMouseEnter}
+        onMouseEnter={()=>{
+          onMouseEnter();
+          getActiveItem(moviesList[id], moviesList);
+        }}
         onMouseLeave={onMouseLeave}
       >
         <div className="small-movie-card__image">
@@ -38,7 +42,7 @@ class Card extends PureComponent {
         <h3 className="small-movie-card__title">
           <a
             onClick={(evt) => {
-              onMovieCardTitleClick(evt, title, moviesList);
+              onMovieCardTitleClick(evt, title);
             }}
             className="small-movie-card__link" href="movie-page.html"
           >
@@ -62,7 +66,8 @@ Card.propTypes = {
   onMouseEnter: PropTypes.func.isRequired,
   onMouseLeave: PropTypes.func.isRequired,
   activePlayerId: PropTypes.number.isRequired,
-  isCardMouseOvered: PropTypes.bool.isRequired
+  isCardMouseOvered: PropTypes.bool.isRequired,
+  getActiveItem: PropTypes.func.isRequired,
 };
 
 

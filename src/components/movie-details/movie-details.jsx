@@ -1,24 +1,21 @@
 import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
 import Tabs from "../tabs/tabs.jsx";
-import Card from "../card/card.jsx";
-import filmsList from "../../mocks/films.js";
+import CardComponent from "../card/card.jsx";
+import withCard from "../../hocs/with-card/with-card.jsx";
+import withActiveItem from "../../hocs/with-active-item/with-active-item.jsx";
+
+const Card = withActiveItem(withCard(CardComponent));
 
 class MovieDetails extends PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {
-      activeTab: `Overview`
-    };
-
-  }
 
   render() {
-    const {movieDetailsData, moviesList, onMovieCardTitleClick} = this.props;
+    const {movieDetailsData, moviesList, onMovieCardTitleClick, setActiveTab, activeTab} = this.props;
 
     const {title, genre, issuedDate, poster, background} = movieDetailsData;
 
-    const filteredByGenere = filmsList.filter((it) => it.genre === genre);
+
+    const filteredByGenere = moviesList.filter((it) => it.genre === genre);
     const similarMoviesList = filteredByGenere.map((it, i) => {
 
       return (
@@ -104,28 +101,28 @@ class MovieDetails extends PureComponent {
               <div className="movie-card__desc">
                 <nav className="movie-nav movie-card__nav">
                   <ul className="movie-nav__list">
-                    <li className={`movie-nav__item ${this.state.activeTab === `Overview` ? `movie-nav__item--active` : ``}`}>
+                    <li className={`movie-nav__item ${activeTab === `Overview` ? `movie-nav__item--active` : ``}`}>
                       <a href="#" className="movie-nav__link"
                         onClick={() => {
-                          this.setState({activeTab: `Overview`});
+                          setActiveTab(`Overview`);
                         }}
                       >
                         Overview
                       </a>
                     </li>
-                    <li className={`movie-nav__item ${this.state.activeTab === `Details` ? `movie-nav__item--active` : ``}`}>
+                    <li className={`movie-nav__item ${activeTab === `Details` ? `movie-nav__item--active` : ``}`}>
                       <a href="#" className="movie-nav__link"
                         onClick={() => {
-                          this.setState({activeTab: `Details`});
+                          setActiveTab(`Details`);
                         }}
                       >
                         Details
                       </a>
                     </li>
-                    <li className={`movie-nav__item ${this.state.activeTab === `Reviews` ? `movie-nav__item--active` : ``}`}>
+                    <li className={`movie-nav__item ${activeTab === `Reviews` ? `movie-nav__item--active` : ``}`}>
                       <a href="#" className="movie-nav__link"
                         onClick={() => {
-                          this.setState({activeTab: `Reviews`});
+                          setActiveTab(`Reviews`);
                         }}
                       >
                         Reviews
@@ -135,7 +132,7 @@ class MovieDetails extends PureComponent {
                 </nav>
                 {<Tabs
                   movieDetailsData={movieDetailsData}
-                  activeTabState={this.state.activeTab}
+                  activeTabInfo={activeTab}
                 />}
               </div>
             </div>
@@ -177,7 +174,9 @@ MovieDetails.propTypes = {
     background: PropTypes.string.isRequired
   }).isRequired,
   moviesList: PropTypes.array.isRequired,
-  onMovieCardTitleClick: PropTypes.func.isRequired
+  onMovieCardTitleClick: PropTypes.func.isRequired,
+  setActiveTab: PropTypes.func.isRequired,
+  activeTab: PropTypes.string.isRequired,
 };
 
 

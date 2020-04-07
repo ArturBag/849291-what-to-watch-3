@@ -11,9 +11,9 @@ class Tabs extends PureComponent {
 
   render() {
 
-    const {movieDetailsData, activeTabState} = this.props;
+    const {movieDetailsData, activeTabInfo} = this.props;
 
-    switch (activeTabState) {
+    switch (activeTabInfo) {
       case `Overview`:
         return (
           <Overview
@@ -45,5 +45,5 @@ export default Tabs;
 
 Tabs.propTypes = {
   movieDetailsData: PropTypes.object.isRequired,
-  activeTabState: PropTypes.string.isRequired
+  activeTabInfo: PropTypes.string.isRequired
 };

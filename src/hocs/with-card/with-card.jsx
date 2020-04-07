@@ -16,9 +16,18 @@ const withCard = (Component) => {
 
 
     render() {
-      const {title, preview, onMovieCardTitleClick, videoSrc, id, moviesList} = this.props;
+      const {title, preview, onMovieCardTitleClick, id, videoSrc, moviesList,
+        getActiveItem, activeItem} = this.props;
+
 
       const {activePlayerId, isCardMouseOvered} = this.state;
+      let indexOfActiveItem = null;
+      if (activeItem === null) {
+        indexOfActiveItem = -1;
+      } else {
+        indexOfActiveItem = moviesList.findIndex((it)=> it === activeItem);
+      }
+
 
       return (
         <Component
@@ -30,7 +39,7 @@ const withCard = (Component) => {
           onMovieCardTitleClick={onMovieCardTitleClick}
           onMouseEnter={() => {
             this.setState({
-              activePlayerId: activePlayerId === id ? -1 : id,
+              activePlayerId: activePlayerId === indexOfActiveItem ? -1 : indexOfActiveItem,
               isCardMouseOvered: !isCardMouseOvered
             });
           }}
@@ -41,6 +50,8 @@ const withCard = (Component) => {
           }}
           activePlayerId={activePlayerId}
           isCardMouseOvered={isCardMouseOvered}
+          getActiveItem={getActiveItem}
+          activeItem={activeItem}
         >
           <video src="#" className="player__video" poster="img/player-poster.jpg"
             ref={this._videoRef}
@@ -58,7 +69,12 @@ const withCard = (Component) => {
     onMovieCardTitleClick: PropTypes.func.isRequired,
     videoSrc: PropTypes.string.isRequired,
     id: PropTypes.number.isRequired,
-    moviesList: PropTypes.array.isRequired
+    moviesList: PropTypes.array.isRequired,
+    activeItem: PropTypes.oneOfType([
+      PropTypes.object.isRequired,
+      PropTypes.oneOf([null]).isRequired,
+    ]),
+    getActiveItem: PropTypes.func.isRequired,
   };
 
   return WithCard;

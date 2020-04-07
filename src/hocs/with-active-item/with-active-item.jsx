@@ -1,78 +1,38 @@
-// import React, {PureComponent} from "react";
-// import PropTypes from "prop-types";
-// import CardComponent from "../components/card/card.jsx";
-// import GenresList from "../components/genres-list/genres-list.jsx";
+import React, {PureComponent} from "react";
 
-// const withActiveItem = (Component) => {
-//   class WithActiveItem extends PureComponent {
-//     constructor(props) {
-//       super(props);
+const withActiveItem = (Component) => {
+  class WithActiveItem extends PureComponent {
+    constructor(props) {
+      super(props);
 
-//       this.state = {
-//         isCardMouseOvered: false,
-//         activePlayerId: -1,
+      this.state = {
+        activeItem: null
+      };
 
-//       };
+    }
 
-//     }
-
-//     render() {
-//       const {title, preview, onMovieCardTitleClick, videoSrc,
-//         id, moviesList, onGenreTypeClick} = this.props;
-
-//       const {activePlayerId, isCardMouseOvered} = this.state;
-//       if (Component === CardComponent) {
-//         return (
-//           <Component
-//             title={title}
-//             preview={preview}
-//             videoSrc={videoSrc}
-//             id={id}
-//             moviesList={moviesList}
-//             onMovieCardTitleClick={onMovieCardTitleClick}
-//             onMouseEnter={() => {
-//               this.setState({
-//                 activePlayerId: activePlayerId === id ? -1 : id,
-//                 isCardMouseOvered: !isCardMouseOvered
-//               });
-//             }}
-//             onMouseLeave={() => {
-//               this.setState({
-//                 isCardMouseOvered: false,
-//                 activePlayerId: -1});
-//             }}
-//             activePlayerId={activePlayerId}
-//             isCardMouseOvered={isCardMouseOvered}
-//           >
-//             <video src="#" className="player__video" poster="img/player-poster.jpg"
-//               ref={this._videoRef}
-//             />
-//           </Component>
-//         );
-//       } else if (Component === GenresList) {
-
-//         return (
-//           <Component>
-//             onGenreTypeClick={onGenreTypeClick}
-//           </Component>
-//         );
-//       }
-//     }
+    render() {
 
 
-//   }
+      const getActiveItem = (activeElement, elementsList)=> {
+        const element = elementsList.find((it)=> it === activeElement);
+        this.setState({activeItem: element});
+      };
 
-//   WithActiveItem.propTypes = {
-//     // title: PropTypes.string.isRequired,
-//     // preview: PropTypes.string.isRequired,
-//     // onMovieCardTitleClick: PropTypes.func.isRequired,
-//     // videoSrc: PropTypes.string.isRequired,
-//     // id: PropTypes.number.isRequired,
-//     // moviesList: PropTypes.array.isRequired
-//   };
+      return (
+        <Component
+          {...this.props}
+          getActiveItem={getActiveItem}
+          activeItem={this.state.activeItem}
+        />
+      );
 
-//   return WithActiveItem;
-// };
+    }
 
+  }
 
-// export default withActiveItem;
+  return WithActiveItem;
+
+};
+
+export default withActiveItem;

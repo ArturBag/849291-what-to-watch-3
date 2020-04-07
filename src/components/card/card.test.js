@@ -449,12 +449,18 @@ it(`Render Card`, () => {
 
   const tree = renderer
     .create(<Card
+      getActiveItem={()=>{}}
+      activeItem={`All genres`}
       title={`Home Alone`}
       preview={`img/test.jpg`}
       videoSrc={`https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`}
       id={0}
       moviesList={filmsList}
       onMovieCardTitleClick={() => {}}
+      onMouseEnter={() => {}}
+      onMouseLeave={() => {}}
+      activePlayerId={-1}
+      isCardMouseOvered={false}
     />)
     .toJSON();
 

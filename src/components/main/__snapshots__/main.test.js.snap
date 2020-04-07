@@ -146,6 +146,8 @@ Array [
       className="catalog"
     >
       <GenresList
+        activeItem={null}
+        getActiveItem={[Function]}
         moviesList={
           Array [
             Object {

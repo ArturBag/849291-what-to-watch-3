@@ -278,9 +278,9 @@ Array [
             className="small-movie-card__image"
           >
             <img
-              alt="Orlando"
+              alt="Goal"
               height={175}
-              src="img/orlando.jpg"
+              src="../../markup/img/orlando.jpg"
               width={280}
             />
           </div>
@@ -292,7 +292,7 @@ Array [
               href="movie-page.html"
               onClick={[Function]}
             >
-              Orlando
+              Goal
             </a>
           </h3>
         </article>

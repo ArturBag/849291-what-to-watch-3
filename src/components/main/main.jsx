@@ -1,6 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import GenresList from "../genres-list/genres-list.jsx";
+import GenresListComponent from "../genres-list/genres-list.jsx";
+import withActiveItem from "../../hocs/with-active-item/with-active-item.jsx";
+
+const GenresList = withActiveItem(GenresListComponent);
 
 const Main = (props) => {
 

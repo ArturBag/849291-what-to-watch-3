@@ -519,6 +519,8 @@ it(`Should render movie details component`, () => {
       movieDetailsData={movieDetailsData}
       moviesList={filmsList}
       onMovieCardTitleClick={() => { }}
+      setActiveTab={() => { }}
+      activeTab={`Overview`}
     />).toJSON();
 
   expect(tree).toMatchSnapshot();

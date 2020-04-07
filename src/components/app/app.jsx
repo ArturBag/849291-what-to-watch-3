@@ -5,20 +5,24 @@ import {connect} from "react-redux";
 import filmsList from "../../mocks/films.js";
 import {ActionCreator} from "../../reducer.js";
 import Main from "../main/main.jsx";
-import MovieDetails from "../movie-details/movie-details.jsx";
+import MovieDetailsComponent from "../movie-details/movie-details.jsx";
+import withMovieDetails from "../../hocs/with-movie-details/with-movie-details.jsx";
 
 class App extends PureComponent {
 
   _renderApp() {
 
-    const {activeComponent, activeMovieDetailsIndex,
-      moviesList, onMovieCardTitleClick} = this.props;
+    const {activeComponent, activeMovieDetailsIndex, onMovieCardTitleClick} = this.props;
+
+    const MovieDetails = withMovieDetails(MovieDetailsComponent);
 
     const MovieHeader = {
       TITLE: filmsList[0].title,
       GENRE: filmsList[0].genre,
       ISSUED_DATE: filmsList[0].issuedDate
     };
+
+    const moviesList = filmsList;
 
     const movieDetailsData = moviesList[activeMovieDetailsIndex];
 
@@ -48,8 +52,10 @@ class App extends PureComponent {
   }
 
   render() {
-    const {moviesList, activeMovieDetailsIndex, onMovieCardTitleClick} = this.props;
+    const {activeMovieDetailsIndex, onMovieCardTitleClick} = this.props;
 
+    const MovieDetails = withMovieDetails(MovieDetailsComponent);
+    const moviesList = filmsList;
     const movieDetailsData = moviesList[activeMovieDetailsIndex];
 
     return (
@@ -72,7 +78,6 @@ class App extends PureComponent {
 }
 
 App.propTypes = {
-  moviesList: PropTypes.array.isRequired,
   activeMovieDetailsIndex: PropTypes.number.isRequired,
   onMovieCardTitleClick: PropTypes.func.isRequired,
   activeComponent: PropTypes.string.isRequired
@@ -81,7 +86,6 @@ App.propTypes = {
 const mapStateToProps = (state) => ({
   activeComponent: state.activeComponent,
   activeMovieDetailsIndex: state.activeMovieDetailsIndex,
-  moviesList: state.moviesList
 });
 
 const mapDispatchToProps = (dispatch) => ({

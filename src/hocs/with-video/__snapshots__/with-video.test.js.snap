@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`withAudio is rendered correctly 1`] = `
+<div>
+  <video
+    className="player__video"
+    poster="img/player-poster.jpg"
+    src="#"
+  />
+</div>
+`;

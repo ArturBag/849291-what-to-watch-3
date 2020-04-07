@@ -1,7 +1,7 @@
 import React from "react";
-import Enzyme, {shallow} from "enzyme";
+import Enzyme, {mount} from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
-import Card from "./card.jsx";
+import Card from "../../components/card/card.jsx";
 
 Enzyme.configure({
   adapter: new Adapter()
@@ -450,13 +450,37 @@ const filmsList = [
   }
 ];
 
-describe(`Card events`, () => {
-  it(`Should card title be pressed`, () => {
+describe(`Card state events`, () => {
+
+  // it(`On mouse enter`, () => {
 
 
-    const onMovieCardTitleClick = jest.fn();
+  //   const mainComponent = shallow(
+  //       <Card
+  //         getActiveItem={()=>{}}
+  //         activeItem={`All genres`}
+  //         title={`Friends`}
+  //         preview={`img/test.jpg`}
+  //         videoSrc={`https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`}
+  //         id={0}
+  //         moviesList={filmsList}
+  //         onMovieCardTitleClick={() => { }}
+  //         onMouseEnter={() => {}}
+  //         onMouseLeave={() => {}}
+  //         activePlayerId={-1}
+  //         isCardMouseOvered={false}
+  //       />
+  //   );
 
-    const mainComponent = shallow(
+  //   mainComponent.simulate(`mouseenter`);
+  //   expect(mainComponent.state(`isCardMouseOvered` === true)).toBe(true);
+  //   expect(mainComponent.state(`activePlayerId`) >= 0).toBe(true);
+  // });
+
+  it(`On mouse enter`, () => {
+
+
+    const mainComponent = mount(
         <Card
           getActiveItem={()=>{}}
           activeItem={`All genres`}
@@ -465,7 +489,7 @@ describe(`Card events`, () => {
           videoSrc={`https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`}
           id={0}
           moviesList={filmsList}
-          onMovieCardTitleClick={onMovieCardTitleClick}
+          onMovieCardTitleClick={() => { }}
           onMouseEnter={() => {}}
           onMouseLeave={() => {}}
           activePlayerId={-1}
@@ -473,12 +497,39 @@ describe(`Card events`, () => {
         />
     );
 
-    const cardTitleLink = mainComponent.find(`.small-movie-card__link`);
+    expect(mainComponent.state.isCardMouseOvered).toBe(false);
+    // expect(mainComponent.state(`isCardMouseOvered`)).toEqual(false);
+    mainComponent.find(`.small-movie-card catalog__movies-card`).simulate(`mouseenter`);
+    // expect(mainComponent.state(`isCardMouseOvered`)).toEqual(true);
+    mainComponent.setState({isCardMouseOvered: true});
 
-    cardTitleLink.props().onClick();
-
-    expect(onMovieCardTitleClick.mock.calls.length).toBe(1);
-
+    expect(mainComponent.state.isCardMouseOvered).toBe(true);
+    expect(mainComponent.state.activePlayerId).toBe(0);
   });
 
+  it(`On mouse leave`, () => {
+
+
+    const mainComponent = mount(
+        <Card
+          getActiveItem={()=>{}}
+          activeItem={`All genres`}
+          title={`Friends`}
+          preview={`img/test.jpg`}
+          videoSrc={`https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`}
+          id={0}
+          moviesList={filmsList}
+          onMovieCardTitleClick={() => { }}
+          onMouseEnter={() => {}}
+          onMouseLeave={() => {}}
+          activePlayerId={0}
+          isCardMouseOvered={true}
+        />
+    );
+
+    mainComponent.simulate(`mouseleave`);
+    expect(mainComponent.state(`isCardMouseOvered` === false)).toBe(true);
+
+    expect(mainComponent.state(`activePlayerId`) === -1).toBe(true);
+  });
 });

@@ -10,10 +10,58 @@ const MOVIES_LIMIT_TO_DISPLAY = 8;
 
 const GenresList = (props) => {
 
-  const {activeGenre, onMovieCardTitleClick, onGenreTypeClick, onShowMoreButtonClick} = props;
-  let {moviesList, moviesQtyToShow} = props;
+  const {onMovieCardTitleClick, onShowMoreButtonClick,
+    getActiveItem} = props;
+  let {moviesQtyToShow, moviesList, activeItem} = props;
 
-  let moviesDataLenght = moviesList.length;
+  if (activeItem === null) {
+    activeItem = `All genres`;
+  }
+
+  const uniqueGenresList = [];
+  const uniqueMovies = [];
+  moviesList.forEach((it) => {
+
+    if (uniqueGenresList.includes(it.genre)) {
+      return false;
+    } else {
+      uniqueGenresList.push(it.genre);
+
+      uniqueMovies.push(it);
+
+    }
+
+    return 0;
+
+  });
+
+  const getFilteredFilmsList = (genre) => {
+    let movieGenre = ``;
+    switch (genre) {
+      case `Comedies`:
+        movieGenre = `Comedy`;
+        break;
+
+      case `Dramas`:
+        movieGenre = `Drama`;
+        break;
+
+      case `Thrillers`:
+        movieGenre = `Thriller`;
+        break;
+
+      default: movieGenre = genre;
+
+    }
+
+    return moviesList.filter((movie) => movie.genre === movieGenre);
+  };
+
+
+  const filteredMovies = activeItem === `All genres` ? uniqueMovies : getFilteredFilmsList(activeItem);
+
+
+  let moviesDataLenght = filteredMovies.length;
   let isShowMoreComponentDisplayed = true;
 
   if (moviesDataLenght < MOVIES_LIMIT_TO_DISPLAY) {
@@ -28,19 +76,18 @@ const GenresList = (props) => {
   }
 
 
-  moviesList = moviesList.slice(0, moviesQtyToShow);
-
+  moviesList = filteredMovies.slice(0, moviesQtyToShow);
 
   const genresListData = genresListItems.map((genre, index) => {
 
 
-    const activeGenreClass = genre === activeGenre ? `catalog__genres-item--active` : ``;
+    const activeGenreClass = genre === activeItem ? `catalog__genres-item--active` : ``;
 
     return (
       <li key={genre + index} className={`catalog__genres-item ${activeGenreClass}`}>
         <a href="#" className="catalog__genres-link"
           onClick={() => {
-            onGenreTypeClick(genre);
+            activeItem = getActiveItem(genre, genresListItems);
           }}
         >
           {genre}
@@ -76,23 +123,22 @@ const GenresList = (props) => {
 };
 
 GenresList.propTypes = {
-  activeGenre: PropTypes.string.isRequired,
+  activeItem: PropTypes.oneOfType([
+    PropTypes.string.isRequired,
+    PropTypes.oneOf([null]).isRequired,
+  ]),
   moviesList: PropTypes.array.isRequired,
   onMovieCardTitleClick: PropTypes.func.isRequired,
-  onGenreTypeClick: PropTypes.func.isRequired,
   moviesQtyToShow: PropTypes.number.isRequired,
   onShowMoreButtonClick: PropTypes.func.isRequired,
+  getActiveItem: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
-  activeGenre: state.activeGenre,
   moviesQtyToShow: state.moviesQtyToShow,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  onGenreTypeClick(genre) {
-    dispatch(ActionCreator.onGenreTypeClick(genre));
-  },
   onShowMoreButtonClick() {
     dispatch(ActionCreator.onShowMoreButtonClick());
   },

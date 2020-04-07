@@ -187,33 +187,6 @@ Array [
         className="small-movie-card__image"
       >
         <img
-          alt="Misfits"
-          height={175}
-          src="../../markup/img/macbeth.jpg"
-          width={280}
-        />
-      </div>
-      <h3
-        className="small-movie-card__title"
-      >
-        <a
-          className="small-movie-card__link"
-          href="movie-page.html"
-          onClick={[Function]}
-        >
-          Misfits
-        </a>
-      </h3>
-    </article>
-    <article
-      className="small-movie-card catalog__movies-card"
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-    >
-      <div
-        className="small-movie-card__image"
-      >
-        <img
           alt="Terminal"
           height={175}
           src="../../markup/img/aviator.jpg"

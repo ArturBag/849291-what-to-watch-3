@@ -1,7 +1,7 @@
 import React from "react";
-import Enzyme, {shallow} from "enzyme";
+import Enzyme, {mount} from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
-import Card from "./card.jsx";
+import Card from "../../components/card/card.jsx";
 
 Enzyme.configure({
   adapter: new Adapter()
@@ -450,35 +450,9 @@ const filmsList = [
   }
 ];
 
-describe(`Card events`, () => {
-  it(`Should card title be pressed`, () => {
+
+// it(`Returns active item`, () => {
 
 
-    const onMovieCardTitleClick = jest.fn();
+// });
 
-    const mainComponent = shallow(
-        <Card
-          getActiveItem={()=>{}}
-          activeItem={`All genres`}
-          title={`Friends`}
-          preview={`img/test.jpg`}
-          videoSrc={`https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`}
-          id={0}
-          moviesList={filmsList}
-          onMovieCardTitleClick={onMovieCardTitleClick}
-          onMouseEnter={() => {}}
-          onMouseLeave={() => {}}
-          activePlayerId={-1}
-          isCardMouseOvered={false}
-        />
-    );
-
-    const cardTitleLink = mainComponent.find(`.small-movie-card__link`);
-
-    cardTitleLink.props().onClick();
-
-    expect(onMovieCardTitleClick.mock.calls.length).toBe(1);
-
-  });
-
-});
